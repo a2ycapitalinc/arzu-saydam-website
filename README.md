@@ -17,3 +17,4 @@ Open `index.html` in a browser, or serve the folder:
 3. Framework preset: **Other** (no build). Output dir: root. Deploy.
 
 The homepage hero plays `assets/hero-walk.mp4` (autoplay, muted, looping) with `hero_poster.jpg` as the still fallback.
+Updated
