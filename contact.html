@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İletişim — Arzu Saydam</title>
+<meta name="description" content="Yazar Arzu Saydam ile iletişime geçin — okurlar, etkinlik düzenleyenler ve basın için.">
+<link rel="icon" href="assets/logo_square.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="contact">
+<div id="nav-slot"></div>
+
+<div class="page-head">
+  <div class="section-tag"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span></div>
+  <h1><span data-lang="tr">Merhaba deyin</span><span data-lang="en">Say hello</span></h1>
+  <p><span data-lang="tr">Okurlar, etkinlik düzenleyenler ve basın için. Arzu her mesajı okur.</span><span data-lang="en">For readers, event organisers, and media alike. Arzu reads every message.</span></p>
+</div>
+
+<section>
+  <div class="narrow">
+    <div class="grid grid-2" style="align-items:start">
+      <div class="card">
+        <div class="body">
+          <h3 style="margin-bottom:1rem"><span data-lang="tr">Mesaj gönderin</span><span data-lang="en">Send a message</span></h3>
+          <form onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('c-thanks').style.display='block';">
+            <div class="field"><label for="c-name"><span data-lang="tr">Adınız</span><span data-lang="en">Your name</span></label><input id="c-name" type="text" required></div>
+            <div class="field"><label for="c-email"><span data-lang="tr">E-posta adresi</span><span data-lang="en">Email address</span></label><input id="c-email" type="email" required></div>
+            <div class="field"><label for="c-topic"><span data-lang="tr">Konu nedir?</span><span data-lang="en">What's this about?</span></label>
+              <select id="c-topic">
+                <option data-lang="tr">Bir okurdan not</option><option data-lang="en">A note from a reader</option>
+                <option data-lang="tr">Etkinlik daveti</option><option data-lang="en">An event invitation</option>
+                <option data-lang="tr">Basın veya söyleşi talebi</option><option data-lang="en">A media or interview request</option>
+                <option data-lang="tr">Başka bir şey</option><option data-lang="en">Something else</option>
+              </select>
+            </div>
+            <div class="field"><label for="c-msg"><span data-lang="tr">Mesaj</span><span data-lang="en">Message</span></label><textarea id="c-msg" rows="5" required></textarea></div>
+            <button type="submit" class="btn btn-gold btn-lg" style="width:100%"><span data-lang="tr">Mesajı gönder</span><span data-lang="en">Send message</span></button>
+          </form>
+          <div id="c-thanks" style="display:none;text-align:center;padding:1rem 0">
+            <div style="font-size:2rem;color:var(--gold)">❧</div>
+            <h3><span data-lang="tr">Teşekkürler</span><span data-lang="en">Thank you</span></h3>
+            <p style="color:var(--ink-soft)"><span data-lang="tr">Mesajınız gönderildi. Arzu en kısa sürede size dönecek.</span><span data-lang="en">Your message has been sent. Arzu will be in touch soon.</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom:0.6rem"><span data-lang="tr">E-posta ile</span><span data-lang="en">By email</span></h3>
+        <p style="color:var(--ink-soft);margin-bottom:1.6rem"><a href="mailto:hello@arzusaydamauthor.com" style="color:var(--gold)">hello@arzusaydamauthor.com</a></p>
+
+        <h3 style="margin-bottom:0.6rem"><span data-lang="tr">Basın için</span><span data-lang="en">For media</span></h3>
+        <p style="color:var(--ink-soft);margin-bottom:1.6rem"><span data-lang="tr">Gazeteciler, biyografileri, fotoğrafları ve basın bültenini <a href="media-kit.html" style="color:var(--gold)">basın kitinde</a> bulabilir.</span><span data-lang="en">Journalists can find bios, photos and a press release in the <a href="media-kit.html" style="color:var(--gold)">media kit</a>.</span></p>
+
+        <h3 style="margin-bottom:0.6rem"><span data-lang="tr">Arzu'yu çevrimiçi bulun</span><span data-lang="en">Find Arzu online</span></h3>
+        <p style="color:var(--ink-soft);margin-bottom:0.6rem"><span data-lang="tr">Aşağıdaki platformlarda en aktif.</span><span data-lang="en">She's most active on the platforms below.</span></p>
+        <div style="display:flex;flex-direction:column;gap:0.5rem">
+          <a href="https://instagram.com" target="_blank" rel="noopener" style="color:var(--ink-soft)">Instagram &nbsp;→</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" style="color:var(--ink-soft)">Facebook &nbsp;→</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" style="color:var(--ink-soft)">LinkedIn &nbsp;→</a>
+          <a href="https://goodreads.com" target="_blank" rel="noopener" style="color:var(--ink-soft)">Goodreads &nbsp;→</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-slot"></div>
+<script src="partials.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bülten — Arzu Saydam</title>
+<meta name="description" content="Arzu Saydam'ın bültenine katılın — bahçeden aceleye getirmeyen notlar ve sizi karşılayan küçük bir hediye.">
+<link rel="icon" href="assets/logo_square.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="newsletter">
+<div id="nav-slot"></div>
+
+<div class="page-head">
+  <div class="section-tag"><span data-lang="tr">Bülten</span><span data-lang="en">Newsletter</span></div>
+  <h1><span data-lang="tr">Bahçeden mektuplar</span><span data-lang="en">Letters from the garden</span></h1>
+  <p><span data-lang="tr">Okurlarla doğrudan bir bağ — algoritma yok, gürültü yok. Yalnızca ara sıra gelen, sakin notlar.</span><span data-lang="en">A direct line to readers — no algorithms, no noise. Just occasional, unhurried notes.</span></p>
+</div>
+
+<section>
+  <div class="narrow">
+    <div class="grid grid-2" style="align-items:center">
+      <div>
+        <span class="gift" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--paper-2);border:1px solid var(--line);padding:0.5rem 1rem;border-radius:999px;font-size:0.85rem;margin-bottom:1rem;color:var(--ink-soft)">✦ <span data-lang="tr">Katılana küçük bir hediye</span><span data-lang="en">A free gift when you join</span></span>
+        <h2 class="section-title"><span data-lang="tr">Abone olun ve hoş geldin hediyenizi seçin</span><span data-lang="en">Subscribe, and choose your welcome gift</span></h2>
+        <p style="color:var(--ink-soft);margin:0.6rem 0 1rem"><span data-lang="tr">Katıldığınızda, teşekkür olarak bunlardan birini alacaksınız — kitap alsanız da almasanız da sizin:</span><span data-lang="en">When you join, you'll receive one of these as a thank-you — yours to keep, whether or not you ever buy a book:</span></p>
+        <ul style="list-style:none;color:var(--ink-soft);display:flex;flex-direction:column;gap:0.6rem">
+          <li>❧&nbsp; <span data-lang="tr">E-postanıza gönderilen bir kısa öykü</span><span data-lang="en">A short story, sent straight to your inbox</span></li>
+          <li>❧&nbsp; <span data-lang="tr"><em>Bahçemin Sessiz Bilgeliği</em>'nden örnek bir bölüm</span><span data-lang="en">A sample chapter of <em>Bahçemin Sessiz Bilgeliği</em></span></li>
+          <li>❧&nbsp; <span data-lang="tr">Yazdırılabilir bir bahçe günlüğü sayfası</span><span data-lang="en">A printable garden-journal page</span></li>
+          <li>❧&nbsp; <span data-lang="tr">Yollardan bir seyahat denemesi</span><span data-lang="en">A travel essay from the road</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="body">
+          <h3 style="margin-bottom:1rem"><span data-lang="tr">Listeye katılın</span><span data-lang="en">Join the list</span></h3>
+          <form onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('nl-thanks').style.display='block';">
+            <div class="field"><label for="nl-name"><span data-lang="tr">Adınız</span><span data-lang="en">First name</span></label><input id="nl-name" type="text"></div>
+            <div class="field"><label for="nl-email"><span data-lang="tr">E-posta adresi</span><span data-lang="en">Email address</span></label><input id="nl-email" type="email" required placeholder="ornek@eposta.com"></div>
+            <div class="field"><label for="nl-gift"><span data-lang="tr">Hoş geldin hediyeniz</span><span data-lang="en">Your welcome gift</span></label>
+              <select id="nl-gift">
+                <option data-lang="tr">Bir kısa öykü</option><option data-lang="en">A short story</option>
+                <option data-lang="tr">Örnek bir bölüm</option><option data-lang="en">A sample chapter</option>
+                <option data-lang="tr">Yazdırılabilir bahçe günlüğü sayfası</option><option data-lang="en">A printable garden-journal page</option>
+                <option data-lang="tr">Bir seyahat denemesi</option><option data-lang="en">A travel essay</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-gold btn-lg" style="width:100%"><span data-lang="tr">Abone ol ve hediyemi gönder</span><span data-lang="en">Subscribe &amp; send my gift</span></button>
+            <p style="font-size:0.78rem;color:var(--ink-soft);margin-top:0.8rem;text-align:center"><span data-lang="tr">Asla spam yok. İstediğiniz zaman ayrılabilirsiniz.</span><span data-lang="en">No spam, ever. Unsubscribe anytime.</span></p>
+          </form>
+          <div id="nl-thanks" style="display:none;text-align:center;padding:1rem 0">
+            <div style="font-size:2rem;color:var(--gold)">❧</div>
+            <h3><span data-lang="tr">Bahçeye hoş geldiniz</span><span data-lang="en">Welcome to the garden</span></h3>
+            <p style="color:var(--ink-soft)"><span data-lang="tr">Katıldığınız için teşekkürler. Hediyeniz e-postanıza doğru yola çıktı.</span><span data-lang="en">Thank you for joining. Your gift is on its way to your inbox.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-slot"></div>
+<script src="partials.js"></script>
+</body>
+</html>
