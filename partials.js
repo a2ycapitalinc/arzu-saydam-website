@@ -31,11 +31,11 @@
 
   var langSwitch =
     '<span class="lang-switch" id="langSwitch">' +
-      '<button data-set="tr">TR</button><span class="sep">|</span><button data-set="en">EN</button>' +
+      '<button data-set="tr" aria-label="Türkçe">TR</button><span class="sep" aria-hidden="true">|</span><button data-set="en" aria-label="Switch to English">EN</button>' +
     '</span>';
 
   var nav =
-    '<nav class="nav' + (onDark ? ' on-dark' : '') + '">' +
+    '<nav class="nav' + (onDark ? ' on-dark' : '') + '" aria-label="Primary">' +
       '<div class="nav-inner">' +
         '<a class="brand" href="index.html">' +
           '<span class="mark">Arzu Saydam<small>' + L('Yazar', 'Author') + '</small></span>' +
@@ -44,7 +44,7 @@
           '<li><a href="newsletter.html" class="btn btn-gold" style="color:#fff">' + L('Bülten', 'Newsletter') + '</a></li>' +
           '<li>' + langSwitch + '</li>' +
         '</ul>' +
-        '<button class="nav-toggle" id="navToggle" aria-label="Menu">' +
+        '<button class="nav-toggle" id="navToggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="menu">' +
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">' +
             '<path d="M4 6h16M4 12h16M4 18h16"/></svg>' +
         '</button>' +
@@ -106,7 +106,10 @@
   /* mobile menu toggle */
   var toggle = document.getElementById('navToggle');
   var menu = document.getElementById('menu');
-  if (toggle && menu) toggle.addEventListener('click', function () { menu.classList.toggle('open'); });
+  if (toggle && menu) toggle.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
 
   /* language toggle */
   function setLang(lang) {

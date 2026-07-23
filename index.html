@@ -4,21 +4,56 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arzu Saydam — Yazar</title>
-<meta name="description" content="Arzu Saydam is an author writing quiet stories about gardens, memory, and the long way home — from Istanbul to Canada.">
+<meta name="description" content="Arzu Saydam; hafıza, aidiyet ve bahçenin bilgeliği üzerine sakin hikâyeler yazan bir yazar — İstanbul'dan bir Kanada bahçesine.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Arzu Saydam">
+<meta property="og:title" content="Arzu Saydam — Yazar">
+<meta property="og:description" content="Arzu Saydam; hafıza, aidiyet ve bahçenin bilgeliği üzerine sakin hikâyeler yazan bir yazar — İstanbul'dan bir Kanada bahçesine.">
+<meta property="og:image" content="https://arzu-saydam-author.vercel.app/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arzu Saydam — Yazar">
+<meta name="twitter:description" content="Arzu Saydam; hafıza, aidiyet ve bahçenin bilgeliği üzerine sakin hikâyeler yazan bir yazar — İstanbul'dan bir Kanada bahçesine.">
+<meta name="twitter:image" content="https://arzu-saydam-author.vercel.app/assets/og-image.jpg">
+
+<link rel="canonical" href="https://arzu-saydam-author.vercel.app/">
 <link rel="icon" href="assets/logo_square.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Arzu Saydam",
+  "url": "https://arzu-saydam-author.vercel.app/",
+  "description": "Arzu Saydam; hafıza, aidiyet ve bahçenin bilgeliği üzerine sakin hikâyeler yazan bir yazar.",
+  "inLanguage": ["tr", "en"],
+  "publisher": { "@type": "Person", "name": "Arzu Saydam" }
+}
+</script>
 </head>
 <body data-page="home" data-nav="dark">
+<a class="skip-link" href="#main">Skip to content</a>
 <div id="nav-slot"></div>
+
+<main id="main">
 
 <!-- ===================== HERO (full-bleed video) ===================== -->
 <header class="hero hero--video">
-  <video class="hero-video" autoplay loop muted playsinline poster="assets/hero_poster.jpg">
+  <video class="hero-video" id="heroVideo" autoplay loop muted playsinline aria-hidden="true" poster="assets/hero_poster.jpg">
     <source src="assets/hero-walk.mp4" type="video/mp4">
   </video>
   <div class="v-scrim-top"></div>
   <div class="v-scrim-bottom"></div>
+  <script>
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var hv = document.getElementById('heroVideo');
+      if (hv) { hv.removeAttribute('autoplay'); hv.pause(); }
+    }
+  </script>
 
   <div class="hero-content" style="margin-bottom:1rem">
     <h1 class="stagger d2"><span data-lang="tr">Bahçemin sessiz<br><em>bilgeliği</em></span><span data-lang="en">The silent wisdom<br>of a <em>garden</em></span></h1>
@@ -79,15 +114,15 @@
     </div>
     <div class="grid grid-3">
       <a class="card" href="journal.html">
-        <div class="thumb" style="background:linear-gradient(135deg,#e7d7e9,#c8a6cf)"></div>
+        <div class="thumb" aria-hidden="true" style="background:linear-gradient(135deg,#e7d7e9,#c8a6cf)"></div>
         <div class="body"><div class="meta"><span data-lang="tr">Günlük</span><span data-lang="en">Journal</span></div><h3><span data-lang="tr">Manolya mevsimi</span><span data-lang="en">Magnolia season</span></h3><p><span data-lang="tr">Yıl boyunca bahçe üzerine uzun yazılar — ve her çiçeğin bizden istediği şey.</span><span data-lang="en">Longer essays on the garden through the year — and what each bloom asks of us.</span></p></div>
       </a>
       <a class="card" href="blog.html">
-        <div class="thumb" style="background:linear-gradient(135deg,#dce9d5,#a9c99a)"></div>
+        <div class="thumb" aria-hidden="true" style="background:linear-gradient(135deg,#dce9d5,#a9c99a)"></div>
         <div class="body"><div class="meta"><span data-lang="tr">Notlar</span><span data-lang="en">Reflections</span></div><h3><span data-lang="tr">Küçük, sessiz notlar</span><span data-lang="en">Small, quiet notes</span></h3><p><span data-lang="tr">Üç paragraf, bir fotoğraf, bir düşünce. Gündelik bilgelik, hafifçe tutulmuş.</span><span data-lang="en">Three paragraphs, one photograph, one thought. Everyday wisdom, lightly held.</span></p></div>
       </a>
       <a class="card" href="about.html">
-        <div class="thumb" style="background:linear-gradient(135deg,#e9e0cf,#cdb98f)"></div>
+        <div class="thumb" aria-hidden="true" style="background:linear-gradient(135deg,#e9e0cf,#cdb98f)"></div>
         <div class="body"><div class="meta"><span data-lang="tr">Onun hikâyesi</span><span data-lang="en">Her story</span></div><h3><span data-lang="tr">İstanbul'dan Kanada'ya</span><span data-lang="en">Istanbul to Canada</span></h3><p><span data-lang="tr">Bankacılık, göç, kırk ülke ve yazar olmaya giden uzun yol.</span><span data-lang="en">Banking, immigration, forty countries, and the long road to becoming a writer.</span></p></div>
       </a>
     </div>
@@ -105,6 +140,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <div id="footer-slot"></div>
 <script src="partials.js"></script>

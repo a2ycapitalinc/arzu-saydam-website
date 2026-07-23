@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arzu-saydam-author.vercel.app/sitemap.xml
