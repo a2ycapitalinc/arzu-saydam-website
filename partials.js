@@ -19,7 +19,6 @@
     ['index.html', 'Ana Sayfa', 'Home', 'home'],
     ['about.html', 'Hakkında', 'About', 'about'],
     ['books.html', 'Kitaplar', 'Books', 'books'],
-    ['journal.html', 'Günlük', 'Journal', 'journal'],
     ['blog.html', 'Notlar', 'Reflections', 'blog'],
     ['events.html', 'Etkinlikler', 'Events', 'events'],
     ['contact.html', 'İletişim', 'Contact', 'contact']
@@ -68,28 +67,10 @@
                 'Stories grown slowly, the way a garden is — from Istanbul to a quiet Canadian yard.') +
             '</p>' +
             '<div class="socials">' +
-              '<a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener">' + ig + '</a>' +
-              '<a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener">' + fb + '</a>' +
-              '<a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener">' + li + '</a>' +
-              '<a href="https://goodreads.com" aria-label="Goodreads" target="_blank" rel="noopener">' + gr + '</a>' +
+              '<a href="https://www.instagram.com/arzusaydam" aria-label="Instagram" target="_blank" rel="noopener">' + ig + '</a>' +
+              '<a href="https://facebook.com/n.arzusaydam" aria-label="Facebook" target="_blank" rel="noopener">' + fb + '</a>' +
             '</div>' +
           '</div>' +
-          '<div><h4>' + L('Keşfet', 'Explore') + '</h4><ul>' +
-            '<li><a href="about.html">' + L('Arzu Hakkında', 'About Arzu') + '</a></li>' +
-            '<li><a href="books.html">' + L('Kitaplar', 'Books') + '</a></li>' +
-            '<li><a href="journal.html">' + L('Günlük', 'Journal') + '</a></li>' +
-            '<li><a href="blog.html">' + L('Notlar', 'Reflections') + '</a></li>' +
-          '</ul></div>' +
-          '<div><h4>' + L('Bağlan', 'Connect') + '</h4><ul>' +
-            '<li><a href="events.html">' + L('Etkinlikler', 'Events') + '</a></li>' +
-            '<li><a href="testimonials.html">' + L('Yorumlar', 'Reviews') + '</a></li>' +
-            '<li><a href="faq.html">' + L('Sık Sorulanlar', 'FAQ') + '</a></li>' +
-            '<li><a href="media-kit.html">' + L('Basın Kiti', 'Media Kit') + '</a></li>' +
-          '</ul></div>' +
-          '<div><h4>' + L('İletişimde kal', 'Stay in touch') + '</h4><ul>' +
-            '<li><a href="newsletter.html">' + L('Bülten', 'Newsletter') + '</a></li>' +
-            '<li><a href="contact.html">' + L('İletişim', 'Contact') + '</a></li>' +
-          '</ul></div>' +
         '</div>' +
         '<div class="footer-bottom">' +
           '<span>&copy; ' + year + ' Arzu Saydam. ' + L('Tüm hakları saklıdır.', 'All rights reserved.') + '</span>' +

@@ -3,6 +3,10 @@
   "cleanUrls": true,
   "framework": null,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/journal", "destination": "/blog", "permanent": true },
+    { "source": "/journal.html", "destination": "/blog.html", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/assets/(hero-walk.mp4|hero_poster.jpg|arzu.jpg)",
