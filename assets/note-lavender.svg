@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sprigs of lavender">
+  <defs>
+    <linearGradient id="lavBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3e9f2"/>
+      <stop offset="1" stop-color="#d8c3de"/>
+    </linearGradient>
+    <g id="stalk">
+      <path d="M0 0 C0 -40 0 -80 0 -150" fill="none" stroke="#7f9070" stroke-width="3.4" stroke-linecap="round"/>
+      <g fill="#8a67a8">
+        <ellipse cx="0" cy="-150" rx="8" ry="12"/>
+        <ellipse cx="-9" cy="-138" rx="8" ry="11"/><ellipse cx="9" cy="-138" rx="8" ry="11"/>
+        <ellipse cx="-10" cy="-122" rx="8.5" ry="11"/><ellipse cx="10" cy="-122" rx="8.5" ry="11"/>
+        <ellipse cx="-10" cy="-106" rx="8.5" ry="11"/><ellipse cx="10" cy="-106" rx="8.5" ry="11"/>
+        <ellipse cx="-9" cy="-90" rx="8" ry="10"/><ellipse cx="9" cy="-90" rx="8" ry="10"/>
+        <ellipse cx="0" cy="-118" rx="8.5" ry="12"/>
+      </g>
+      <g fill="#a483c0" opacity="0.9">
+        <circle cx="-3" cy="-146" r="3"/><circle cx="4" cy="-132" r="3"/>
+        <circle cx="-5" cy="-116" r="3"/><circle cx="5" cy="-100" r="3"/>
+      </g>
+    </g>
+  </defs>
+  <rect width="800" height="350" fill="url(#lavBg)"/>
+  <circle cx="610" cy="120" r="80" fill="#ffffff" opacity="0.4"/>
+  <path d="M0 300 H800" stroke="#c3aecb" stroke-width="1.5"/>
+  <g transform="translate(300 300)">
+    <use href="#stalk" transform="translate(-90 0) rotate(-9)"/>
+    <use href="#stalk" transform="translate(0 6) scale(1.12)"/>
+    <use href="#stalk" transform="translate(92 2) rotate(8)"/>
+  </g>
+  <!-- slender leaves -->
+  <g fill="none" stroke="#7f9070" stroke-width="3" stroke-linecap="round">
+    <path d="M300 300 C280 276 276 256 284 236"/>
+    <path d="M300 300 C322 278 328 258 322 240"/>
+  </g>
+  <rect x="60" y="58" width="46" height="2" fill="#b08d46"/>
+</svg>

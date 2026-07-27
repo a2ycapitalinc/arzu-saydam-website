@@ -1,0 +1,31 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tomatoes ripening on the vine">
+  <defs>
+    <linearGradient id="tomBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6ead8"/>
+      <stop offset="1" stop-color="#eccfa9"/>
+    </linearGradient>
+    <radialGradient id="tomFruit" cx="0.38" cy="0.34" r="0.75">
+      <stop offset="0" stop-color="#e07a54"/>
+      <stop offset="1" stop-color="#c2492f"/>
+    </radialGradient>
+    <g id="tomato">
+      <circle r="30" fill="url(#tomFruit)"/>
+      <path d="M-2 -30 l-9 -11 M-2 -30 l0 -13 M-2 -30 l9 -11 M-2 -30 l-16 -6 M-2 -30 l14 -8" stroke="#6f8a52" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+      <ellipse cx="-9" cy="-9" rx="7" ry="4.5" fill="#ffffff" opacity="0.35"/>
+    </g>
+  </defs>
+  <rect width="800" height="350" fill="url(#tomBg)"/>
+  <circle cx="620" cy="118" r="82" fill="#ffffff" opacity="0.4"/>
+  <path d="M0 300 H800" stroke="#d8bd97" stroke-width="1.5"/>
+  <!-- vine -->
+  <path d="M150 40 C150 130 210 150 250 210 C284 262 250 300 300 322" fill="none" stroke="#6f8a52" stroke-width="4" stroke-linecap="round"/>
+  <!-- leaves -->
+  <g fill="#7f9a5c">
+    <path d="M250 210 C214 196 190 208 176 236 C214 244 244 236 250 210 Z"/>
+    <path d="M210 150 C238 120 270 120 292 132 C266 166 234 168 210 150 Z"/>
+  </g>
+  <use href="#tomato" x="300" y="248"/>
+  <use href="#tomato" x="366" y="284" transform="scale(0.82)"/>
+  <use href="#tomato" x="250" y="300" transform="scale(0.9)"/>
+  <rect x="60" y="58" width="46" height="2" fill="#b08d46"/>
+</svg>

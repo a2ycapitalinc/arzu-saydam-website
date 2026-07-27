@@ -1,0 +1,39 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A frosted branch on a cold morning">
+  <defs>
+    <linearGradient id="frostBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef4f8"/>
+      <stop offset="1" stop-color="#cfdfec"/>
+    </linearGradient>
+    <g id="flake" stroke="#ffffff" stroke-width="2" stroke-linecap="round">
+      <line x1="0" y1="-9" x2="0" y2="9"/>
+      <line x1="-7.8" y1="-4.5" x2="7.8" y2="4.5"/>
+      <line x1="-7.8" y1="4.5" x2="7.8" y2="-4.5"/>
+    </g>
+  </defs>
+  <rect width="800" height="350" fill="url(#frostBg)"/>
+  <circle cx="610" cy="120" r="78" fill="#ffffff" opacity="0.45"/>
+  <path d="M0 302 H800" stroke="#b6cbdc" stroke-width="1.5"/>
+  <!-- frosted branch -->
+  <g fill="none" stroke="#728594" stroke-width="3.4" stroke-linecap="round">
+    <path d="M120 322 C150 250 138 196 214 150"/>
+    <path d="M172 214 C204 196 232 202 262 178"/>
+    <path d="M150 262 C124 250 104 252 82 232"/>
+    <path d="M198 176 C226 164 250 168 276 146"/>
+    <path d="M188 250 C214 246 232 252 250 240"/>
+  </g>
+  <!-- frost tips -->
+  <g fill="#ffffff" opacity="0.92">
+    <circle cx="214" cy="150" r="4.5"/><circle cx="262" cy="178" r="4"/>
+    <circle cx="82" cy="232" r="4"/><circle cx="276" cy="146" r="4.5"/>
+    <circle cx="250" cy="240" r="3.6"/>
+  </g>
+  <!-- drifting flakes -->
+  <use href="#flake" x="360" y="90"/>
+  <use href="#flake" x="440" y="160" opacity="0.8"/>
+  <use href="#flake" x="330" y="210" opacity="0.7"/>
+  <use href="#flake" x="500" y="240" opacity="0.85"/>
+  <use href="#flake" x="560" y="180" opacity="0.6"/>
+  <!-- rising steam, gold -->
+  <path d="M660 300 C682 262 646 244 672 208 C692 181 662 164 682 138" fill="none" stroke="#b08d46" stroke-width="2.6" stroke-linecap="round" opacity="0.8"/>
+  <rect x="60" y="58" width="46" height="2" fill="#b08d46"/>
+</svg>
