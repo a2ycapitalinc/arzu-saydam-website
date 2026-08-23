@@ -198,8 +198,11 @@ section { padding: 5rem 0; }
 
 /* Quote / testimonial */
 .quote { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem;
-  box-shadow: var(--shadow); }
+  box-shadow: var(--shadow); align-self: start; }
 .quote p { font-family: var(--serif); font-style: italic; font-size: 1.15rem; color: var(--ink-soft); }
+.quote p + p { margin-top: 0.85rem; }
+.quote .stars { color: var(--gold); letter-spacing: 0.12em; font-size: 0.95rem; margin-bottom: 0.75rem;
+  line-height: 1; }
 .quote .by { font-family: var(--sans); font-style: normal; font-size: 0.85rem; color: var(--gold);
   margin-top: 1rem; letter-spacing: 0.06em; }
 
