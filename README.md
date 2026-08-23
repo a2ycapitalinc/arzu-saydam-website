@@ -19,10 +19,11 @@ Open `index.html` in a browser, or serve the folder:
 
 ## Deploy
 Connected to Vercel via GitHub — every push to `main` deploys automatically.
-Live at: https://arzu-saydam-author.vercel.app
+Live at: https://www.arzusaydamauthor.com
+
+Canonical, Open Graph, Twitter image, `sitemap.xml`, and `robots.txt` URLs use that `www` host so search and share previews stay on one domain.
 
 ## Known follow-ups
-- `books.html` has placeholder ISBNs and purchase links (`href="#"`) — swap in the real ones when available.
-- Social links (Instagram/Facebook/LinkedIn/Goodreads) point to platform homepages — update to Arzu's actual profile URLs once created.
-- Contact and newsletter forms are front-end only (no email delivery yet) — wire to a form service (e.g. Formspree) when ready.
-- Once `arzusaydamauthor.com` is pointed at this project in Vercel, update the canonical URLs, `sitemap.xml`, and OG image URLs from the `.vercel.app` domain to the custom domain.
+- Purchase links and ISBNs on `books.html` are live (Amazon, Lulu, Kobo).
+- Instagram and Facebook already point to Arzu's profiles in the footer and on Contact. LinkedIn and Goodreads are not linked on the site.
+- Contact and newsletter forms are still front-end only (no email delivery). They show a thank-you state in the browser and are not wired to a form service.
