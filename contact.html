@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+<script>
+try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.add('lang-en');document.documentElement.lang='en';}}catch(e){}
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>İletişim — Arzu Saydam</title>
@@ -47,10 +50,10 @@
             <div class="field"><label for="c-email"><span data-lang="tr">E-posta adresi</span><span data-lang="en">Email address</span></label><input id="c-email" type="email" required></div>
             <div class="field"><label for="c-topic"><span data-lang="tr">Konu nedir?</span><span data-lang="en">What's this about?</span></label>
               <select id="c-topic">
-                <option data-lang="tr">Bir okurdan not</option><option data-lang="en">A note from a reader</option>
-                <option data-lang="tr">Etkinlik daveti</option><option data-lang="en">An event invitation</option>
-                <option data-lang="tr">Basın veya söyleşi talebi</option><option data-lang="en">A media or interview request</option>
-                <option data-lang="tr">Başka bir şey</option><option data-lang="en">Something else</option>
+                <option value="reader" data-label-tr="Bir okurdan not" data-label-en="A note from a reader">Bir okurdan not</option>
+                <option value="event" data-label-tr="Etkinlik daveti" data-label-en="An event invitation">Etkinlik daveti</option>
+                <option value="media" data-label-tr="Basın veya söyleşi talebi" data-label-en="A media or interview request">Basın veya söyleşi talebi</option>
+                <option value="other" data-label-tr="Başka bir şey" data-label-en="Something else">Başka bir şey</option>
               </select>
             </div>
             <div class="field"><label for="c-msg"><span data-lang="tr">Mesaj</span><span data-lang="en">Message</span></label><textarea id="c-msg" rows="5" required></textarea></div>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+<script>
+try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.add('lang-en');document.documentElement.lang='en';}}catch(e){}
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bülten — Arzu Saydam</title>
@@ -59,10 +62,10 @@
             <div class="field"><label for="nl-email"><span data-lang="tr">E-posta adresi</span><span data-lang="en">Email address</span></label><input id="nl-email" type="email" required placeholder="ornek@eposta.com"></div>
             <div class="field"><label for="nl-gift"><span data-lang="tr">Hoş geldin hediyeniz</span><span data-lang="en">Your welcome gift</span></label>
               <select id="nl-gift">
-                <option data-lang="tr">Bir kısa öykü</option><option data-lang="en">A short story</option>
-                <option data-lang="tr">Örnek bir bölüm</option><option data-lang="en">A sample chapter</option>
-                <option data-lang="tr">Yazdırılabilir bahçe günlüğü sayfası</option><option data-lang="en">A printable garden-journal page</option>
-                <option data-lang="tr">Bir seyahat denemesi</option><option data-lang="en">A travel essay</option>
+                <option value="story" data-label-tr="Bir kısa öykü" data-label-en="A short story">Bir kısa öykü</option>
+                <option value="sample" data-label-tr="Örnek bir bölüm" data-label-en="A sample chapter">Örnek bir bölüm</option>
+                <option value="journal" data-label-tr="Yazdırılabilir bahçe günlüğü sayfası" data-label-en="A printable garden-journal page">Yazdırılabilir bahçe günlüğü sayfası</option>
+                <option value="travel" data-label-tr="Bir seyahat denemesi" data-label-en="A travel essay">Bir seyahat denemesi</option>
               </select>
             </div>
             <button type="submit" class="btn btn-gold btn-lg" style="width:100%"><span data-lang="tr">Abone ol ve hediyemi gönder</span><span data-lang="en">Subscribe &amp; send my gift</span></button>
