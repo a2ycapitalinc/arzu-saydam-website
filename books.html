@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+<script>
+try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.add('lang-en');document.documentElement.lang='en';}}catch(e){}
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kitaplarım — Arzu Saydam</title>
@@ -113,6 +116,8 @@
       and only purchase links you actually have. Do not invent a title,
       a Turkish edition, or a store URL.
     -->
+    <div class="catalog">
+    <div class="garden-pair">
     <figure class="garden-film">
       <video controls muted playsinline preload="none" poster="assets/hero_poster.jpg" width="1920" height="1080">
         <source src="assets/hero-walk.mp4" type="video/mp4">
@@ -122,7 +127,7 @@
         <span data-lang="en"><a href="#gentle-wisdom">The Gentle Wisdom of My Garden</a> and <a href="#bahcemin-sessiz-bilgeligi">Bahçemin Sessiz Bilgeliği</a></span>
       </figcaption>
     </figure>
-    <div class="shelf">
+    <div class="shelf shelf-pair">
 
       <article class="book-card" id="gentle-wisdom">
         <div class="cover-frame">
@@ -167,6 +172,8 @@
           </div>
         </div>
       </article>
+    </div>
+    </div>
 
       <article class="book-card" id="quiet-wisdom">
         <div class="cover-frame">
@@ -179,25 +186,22 @@
           <p><span data-lang="tr">Onun <em>The Quiet Wisdom of Wax: Reflections on Art, Creation, and the Inner Life of a Creator</em> adlı kitabı, resmini ve yazısını bir araya getirir; sanatsal ifade ile üreten kişinin iç dünyası arasındaki ilişki üzerine düşünür. Balmumu, pigmentler, ısı ve katmanlarla çalışırken, duyguları ve düşünceleri kelimelerin ötesinde keşfetmesine izin veren bir yaratım süreci buldu.</span><span data-lang="en">Her book <em>The Quiet Wisdom of Wax: Reflections on Art, Creation, and the Inner Life of a Creator</em> brings her painting and writing together, reflecting on the relationship between artistic expression and the inner life of the person creating it. Working with beeswax, pigments, heat, and layers, she discovered a creative process that allowed her to explore emotions and ideas beyond words.</span></p>
           <p class="meta-quiet">Cosmo Publishing Company<br>ISBN 978-1-968741-72-3<br>ISBN-10 1-968741-72-0</p>
           <p class="meta-quiet"><span data-lang="tr">Türkçe baskısı henüz yok.</span><span data-lang="en">No Turkish edition yet.</span></p>
-          <div class="buy">
-            <a href="https://www.amazon.ca/dp/1968741720" class="btn btn-gold"><span data-lang="tr">Amazon'da satın al</span><span data-lang="en">Buy on Amazon</span></a>
-          </div>
           <details class="back-cover">
             <summary><span data-lang="tr">Arka kapak</span><span data-lang="en">Back cover</span></summary>
             <img src="assets/cover-wax-back.png" width="727" height="998" alt="Back cover of The Quiet Wisdom of Wax by Arzu Saydam, with the ISBN 978-1-968741-72-3 barcode">
           </details>
+          <div class="buy">
+            <a href="https://www.amazon.ca/dp/1968741720" class="btn btn-gold"><span data-lang="tr">Amazon'da satın al</span><span data-lang="en">Buy on Amazon</span></a>
+          </div>
         </div>
       </article>
-
     </div>
     <p class="shelf-note"><span data-lang="tr">Yeni kitaplar da burada yer bulacak.</span><span data-lang="en">Future books will take their place here.</span></p>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
-    <div class="book">
-      <div>
+  <div class="narrow">
         <div class="section-tag"><span data-lang="tr">Bahçemin Sessiz Bilgeliği</span><span data-lang="en">The Gentle Wisdom of My Garden</span></div>
         <h2 class="section-title"><span data-lang="tr">Bahçemin Sessiz Bilgeliği: Hayata Dair Dersler</span><span data-lang="en">The Gentle Wisdom of My Garden: Lessons from Nature and Life</span></h2>
         <p class="lead" style="margin-bottom:1.2rem"><em><span data-lang="tr">Bazen en büyük dersler en sessiz yerlerde saklıdır.</span><span data-lang="en">Sometimes life's greatest lessons are found in the quietest places.</span></em></p>
@@ -247,8 +251,6 @@
           </div>
         </div>
         <p style="font-size:0.85rem;color:var(--ink-soft);margin-top:0.8rem"><span data-lang="tr">— Önsözden</span><span data-lang="en">— from the foreword</span></p>
-      </div>
-    </div>
   </div>
 </section>
 

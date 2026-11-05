@@ -124,8 +124,16 @@
     try { localStorage.setItem('lang', lang); } catch (e) {}
     var toggle = document.getElementById('navToggle');
     if (toggle) toggle.setAttribute('aria-label', lang === 'en' ? 'Open menu' : 'Menüyü aç');
+    applySelectLabels();
     updateSwitch();
   }
+  function applySelectLabels() {
+    var en = document.documentElement.classList.contains('lang-en');
+    document.querySelectorAll('option[data-label-tr]').forEach(function (opt) {
+      opt.textContent = en ? opt.getAttribute('data-label-en') : opt.getAttribute('data-label-tr');
+    });
+  }
+  applySelectLabels();
   function updateSwitch() {
     var isEn = document.documentElement.classList.contains('lang-en');
     var sw = document.getElementById('langSwitch');
