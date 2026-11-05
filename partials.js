@@ -17,15 +17,16 @@
 
   var links = [
     ['index.html', 'Ana Sayfa', 'Home', 'home'],
-    ['about.html', 'Hakkında', 'About', 'about'],
-    ['books.html', 'Kitaplar', 'Books', 'books'],
-    ['blog.html', 'Notlar', 'Reflections', 'blog'],
-    ['events.html', 'Etkinlikler', 'Events', 'events'],
+    ['about.html', 'Hakkımda', 'About Me', 'about'],
+    ['books.html', 'Kitaplarım', 'My Books', 'books'],
+    ['art.html', 'Sanatım', 'My Art', 'art'],
+    ['blog.html', 'Blog', 'Blog', 'blog'],
     ['contact.html', 'İletişim', 'Contact', 'contact']
   ];
 
   var menuItems = links.map(function (l) {
-    return '<li><a href="' + l[0] + '"' + (l[3] === page ? ' class="active"' : '') + '>' + L(l[1], l[2]) + '</a></li>';
+    var current = l[3] === page;
+    return '<li><a href="' + l[0] + '"' + (current ? ' class="active" aria-current="page"' : '') + '>' + L(l[1], l[2]) + '</a></li>';
   }).join('');
 
   var langSwitch =
@@ -37,10 +38,9 @@
     '<nav class="nav' + (onDark ? ' on-dark' : '') + '" aria-label="Primary">' +
       '<div class="nav-inner">' +
         '<a class="brand" href="index.html">' +
-          '<span class="mark">Arzu Saydam<small>' + L('Yazar', 'Author') + '</small></span>' +
+          '<span class="mark">Arzu Saydam<small>' + L('Yazar · Sanatçı', 'Author · Artist') + '</small></span>' +
         '</a>' +
         '<ul class="menu" id="menu">' + menuItems +
-          '<li><a href="newsletter.html" class="btn btn-gold" style="color:#fff">' + L('Bülten', 'Newsletter') + '</a></li>' +
           '<li>' + langSwitch + '</li>' +
         '</ul>' +
         '<button class="nav-toggle" id="navToggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="menu">' +
@@ -61,15 +61,36 @@
       '<div class="wrap">' +
         '<div class="footer-grid">' +
           '<div>' +
-            '<a class="brand" href="index.html"><span class="mark">Arzu Saydam<small>' + L('Yazar', 'Author') + '</small></span></a>' +
-            '<p style="margin-top:1rem;font-size:0.92rem;max-width:280px;color:#b7afa1">' +
-              L('Bir bahçe gibi ağır ağır yetişen hikâyeler — İstanbul\'dan sessiz bir Kanada bahçesine.',
-                'Stories grown slowly, the way a garden is — from Istanbul to a quiet Canadian yard.') +
+            '<a class="brand" href="index.html"><span class="mark">Arzu Saydam<small>' + L('Yazar · Sanatçı', 'Author · Artist') + '</small></span></a>' +
+            '<p style="margin-top:1rem;font-size:0.92rem;max-width:300px;color:#b7afa1">' +
+              L('Sanat ve yazı, dikkat etmenin iki yolu — İstanbul\'dan Nova Scotia\'daki bir bahçeye.',
+                'Art and writing are simply different ways of paying attention — from Istanbul to a garden in Nova Scotia.') +
             '</p>' +
             '<div class="socials">' +
               '<a href="https://www.instagram.com/arzusaydam" aria-label="Instagram" target="_blank" rel="noopener">' + ig + '</a>' +
               '<a href="https://facebook.com/n.arzusaydam" aria-label="Facebook" target="_blank" rel="noopener">' + fb + '</a>' +
             '</div>' +
+          '</div>' +
+          '<div>' +
+            '<h4>' + L('Gezin', 'Explore') + '</h4>' +
+            '<ul>' +
+              '<li><a href="index.html">' + L('Ana Sayfa', 'Home') + '</a></li>' +
+              '<li><a href="about.html">' + L('Hakkımda', 'About Me') + '</a></li>' +
+              '<li><a href="books.html">' + L('Kitaplarım', 'My Books') + '</a></li>' +
+              '<li><a href="art.html">' + L('Sanatım', 'My Art') + '</a></li>' +
+              '<li><a href="blog.html">' + L('Blog', 'Blog') + '</a></li>' +
+              '<li><a href="contact.html">' + L('İletişim', 'Contact') + '</a></li>' +
+            '</ul>' +
+          '</div>' +
+          '<div>' +
+            '<h4>' + L('Ayrıca', 'Also') + '</h4>' +
+            '<ul>' +
+              '<li><a href="newsletter.html">' + L('Bülten', 'Newsletter') + '</a></li>' +
+              '<li><a href="testimonials.html">' + L('Yorumlar', 'Reviews') + '</a></li>' +
+              '<li><a href="media-kit.html">' + L('Basın kiti', 'Media kit') + '</a></li>' +
+              '<li><a href="events.html">' + L('Etkinlikler', 'Events') + '</a></li>' +
+              '<li><a href="faq.html">' + L('Sorular', 'FAQ') + '</a></li>' +
+            '</ul>' +
           '</div>' +
         '</div>' +
         '<div class="footer-bottom">' +
@@ -91,6 +112,9 @@
     var open = menu.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
+  if (toggle) {
+    toggle.setAttribute('aria-label', document.documentElement.classList.contains('lang-en') ? 'Open menu' : 'Menüyü aç');
+  }
 
   /* language toggle */
   function setLang(lang) {
@@ -98,6 +122,8 @@
     else document.documentElement.classList.remove('lang-en');
     document.documentElement.setAttribute('lang', lang);
     try { localStorage.setItem('lang', lang); } catch (e) {}
+    var toggle = document.getElementById('navToggle');
+    if (toggle) toggle.setAttribute('aria-label', lang === 'en' ? 'Open menu' : 'Menüyü aç');
     updateSwitch();
   }
   function updateSwitch() {
