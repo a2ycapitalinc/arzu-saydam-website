@@ -79,19 +79,30 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
 }
 </script>
 </head>
-<body data-page="books">
+<body data-page="books" data-nav="dark">
 <a class="skip-link" href="#main">Skip to content</a>
 <div id="nav-slot"></div>
 
 <main id="main">
 
-<div class="page-head">
-  <div class="section-tag"><span data-lang="tr">Kitaplarım</span><span data-lang="en">My Books</span></div>
-  <h1><span data-lang="tr">Sorular, Gözlemler ve Düşünceler</span><span data-lang="en">Questions, Observations, and Reflections</span></h1>
-</div>
+<header class="hero hero--video hero--garden">
+  <video class="hero-video" autoplay loop muted playsinline poster="assets/hero_poster.jpg" aria-hidden="true">
+    <source src="assets/hero-walk.mp4" type="video/mp4">
+  </video>
+  <div class="v-scrim-top"></div>
+  <div class="v-scrim-bottom"></div>
+  <div class="hero-content" style="margin-bottom:1rem">
+    <p class="hero-role stagger d1"><span data-lang="tr">Kitaplarım</span><span data-lang="en">My Books</span></p>
+    <h1 class="stagger d2"><span data-lang="tr">Sorular, Gözlemler<br>ve Düşünceler</span><span data-lang="en">Questions, Observations,<br>and Reflections</span></h1>
+    <div class="hero-cta stagger d4">
+      <a href="#quiet-wisdom" class="btn btn-white btn-lg">The Quiet Wisdom of Wax</a>
+      <a href="#gentle-wisdom" class="btn btn-ghost btn-ghost-light btn-lg">The Gentle Wisdom of My Garden</a>
+    </div>
+  </div>
+</header>
 
-<section>
-  <div class="narrow">
+<section class="books-block">
+  <div class="measure">
     <div class="prose">
       <p><span data-lang="tr">Yazmaya, yazar olmak niyetiyle hiç başlamadım.</span><span data-lang="en">I never began writing with the intention of becoming an author.</span></p>
       <p><span data-lang="tr">Başladım; çünkü keşfetmek istediğim düşünceler, saklamak istediğim gözlemler ve beni rahat bırakmayan sorular vardı.</span><span data-lang="en">I began because I had thoughts I wanted to explore, observations I wanted to preserve, and questions that refused to leave me alone.</span></p>
@@ -107,101 +118,92 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
   </div>
 </section>
 
-<section class="alt">
+<section class="alt books-block">
   <div class="wrap">
     <!--
       FUTURE BOOK
-      Copy an <article class="book-card"> below. Put the cover in assets/
-      (see cover-wax-front.png). Set the edition chip, description, ISBN,
-      and only purchase links you actually have. Do not invent a title,
-      a Turkish edition, or a store URL.
+      Copy an edition row or a .book-feature below. Put the cover in assets/.
+      Set the edition label, description, ISBN, and only purchase links you actually have.
     -->
-    <div class="catalog">
-    <div class="garden-pair">
-    <figure class="garden-film">
-      <video controls muted playsinline preload="none" poster="assets/hero_poster.jpg" width="1920" height="1080">
-        <source src="assets/hero-walk.mp4" type="video/mp4">
-      </video>
-      <figcaption>
-        <span data-lang="tr"><a href="#gentle-wisdom">The Gentle Wisdom of My Garden</a> ve <a href="#bahcemin-sessiz-bilgeligi">Bahçemin Sessiz Bilgeliği</a></span>
-        <span data-lang="en"><a href="#gentle-wisdom">The Gentle Wisdom of My Garden</a> and <a href="#bahcemin-sessiz-bilgeligi">Bahçemin Sessiz Bilgeliği</a></span>
-      </figcaption>
-    </figure>
-    <div class="shelf shelf-pair">
+    <article class="book book-feature" id="quiet-wisdom">
+      <div class="feature-cover">
+        <img src="assets/cover-wax-front.png" width="724" height="1054" alt="Front cover of The Quiet Wisdom of Wax: Reflections on Art, Creation, and the Inner Life of a Creator by Arzu Saydam">
+      </div>
+      <div>
+        <p class="edition"><span data-lang="tr">İngilizce baskı</span><span data-lang="en">English edition</span></p>
+        <h2 class="section-title" style="font-size:clamp(1.8rem, 3vw, 2.5rem);margin-bottom:0.35rem">The Quiet Wisdom of Wax</h2>
+        <p class="sub">Reflections on Art, Creation, and the Inner Life of a Creator</p>
+        <p style="color:var(--ink-soft);margin-top:1rem"><span data-lang="tr">Onun <em>The Quiet Wisdom of Wax: Reflections on Art, Creation, and the Inner Life of a Creator</em> adlı kitabı, resmini ve yazısını bir araya getirir; sanatsal ifade ile üreten kişinin iç dünyası arasındaki ilişki üzerine düşünür. Balmumu, pigmentler, ısı ve katmanlarla çalışırken, duyguları ve düşünceleri kelimelerin ötesinde keşfetmesine izin veren bir yaratım süreci buldu.</span><span data-lang="en">Her book <em>The Quiet Wisdom of Wax: Reflections on Art, Creation, and the Inner Life of a Creator</em> brings her painting and writing together, reflecting on the relationship between artistic expression and the inner life of the person creating it. Working with beeswax, pigments, heat, and layers, she discovered a creative process that allowed her to explore emotions and ideas beyond words.</span></p>
+        <p class="meta-quiet" style="margin-top:0.9rem">Cosmo Publishing Company<br>ISBN 978-1-968741-72-3<br>ISBN-10 1-968741-72-0</p>
+        <p class="meta-quiet"><span data-lang="tr">Türkçe baskısı henüz yok.</span><span data-lang="en">No Turkish edition yet.</span></p>
+        <details class="back-cover">
+          <summary><span data-lang="tr">Arka kapak</span><span data-lang="en">Back cover</span></summary>
+          <img src="assets/cover-wax-back.png" width="727" height="998" alt="Back cover of The Quiet Wisdom of Wax by Arzu Saydam, with the ISBN 978-1-968741-72-3 barcode">
+        </details>
+        <div class="buy-row">
+          <a href="https://www.amazon.ca/dp/1968741720" class="btn btn-gold btn-lg"><span data-lang="tr">Amazon'da satın al</span><span data-lang="en">Buy on Amazon</span></a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
 
-      <article class="book-card" id="gentle-wisdom">
-        <div class="cover-frame">
-          <img src="assets/cover-en.jpg" width="1280" height="1024" alt="Front cover of The Gentle Wisdom of My Garden by Arzu Saydam, English edition">
-        </div>
-        <div class="body">
-          <p class="edition"><span data-lang="tr">İngilizce baskı</span><span data-lang="en">English edition</span></p>
-          <h2>The Gentle Wisdom of My Garden</h2>
-          <p class="sub">Lessons from Nature and Life</p>
-          <p><span data-lang="tr">İlk kitabı <em>The Gentle Wisdom of My Garden</em> — Türkçe baskısıyla <a href="#bahcemin-sessiz-bilgeligi" style="color:var(--gold)"><em>Bahçemin Sessiz Bilgeliği</em></a> — bahçesinde bulduğu sessiz derslere dayanır ve doğal dünyayı gündelik insan deneyimleriyle buluşturur.</span><span data-lang="en">In her first book, <em>The Gentle Wisdom of My Garden</em>, also published in Turkish as <a href="#bahcemin-sessiz-bilgeligi" style="color:var(--gold)"><em>Bahçemin Sessiz Bilgeliği</em></a>, she draws upon the quiet lessons found in her garden, connecting the natural world with everyday human experiences.</span></p>
-          <p class="meta-quiet">ISBN 978-1-968741-66-2<br>ISBN-10 1-968741-66-6</p>
-          <div class="formats">
-            <span class="chip"><span data-lang="tr">Ciltsiz</span><span data-lang="en">Paperback</span></span>
-            <span class="chip"><span data-lang="tr">Ciltli</span><span data-lang="en">Hardcover</span></span>
-            <span class="chip"><span data-lang="tr">E-kitap</span><span data-lang="en">eBook</span></span>
-          </div>
-          <div class="buy">
-            <a href="https://www.amazon.ca/dp/1968741666" class="btn btn-gold"><span data-lang="tr">Amazon'da satın al</span><span data-lang="en">Buy on Amazon</span></a>
-            <a href="#sample" class="btn btn-ghost"><span data-lang="tr">Örnek bölüm oku</span><span data-lang="en">Read a sample</span></a>
-          </div>
-        </div>
-      </article>
-
-      <article class="book-card" id="bahcemin-sessiz-bilgeligi">
-        <div class="cover-frame">
-          <img src="assets/cover-tr.png" width="1222" height="963" alt="Bahçemin Sessiz Bilgeliği — Arzu Saydam, Türkçe baskı kapağı">
-        </div>
-        <div class="body">
-          <p class="edition"><span data-lang="tr">Türkçe baskı</span><span data-lang="en">Turkish edition</span></p>
-          <h2>Bahçemin Sessiz Bilgeliği</h2>
-          <p class="sub">Hayata Dair Dersler</p>
-          <p><span data-lang="tr"><em>The Gentle Wisdom of My Garden</em> kitabının Türkçe baskısı. Bahçesinde bulduğu sessiz derslere dayanır ve doğal dünyayı gündelik insan deneyimleriyle buluşturur.</span><span data-lang="en">The Turkish edition of <em>The Gentle Wisdom of My Garden</em>. She draws upon the quiet lessons found in her garden, connecting the natural world with everyday human experiences.</span></p>
-          <p class="meta-quiet"><span data-lang="tr">ISBN (Ciltsiz)</span><span data-lang="en">ISBN (Paperback)</span> 978-1-968741-60-0<br><span data-lang="tr">ISBN (E-kitap)</span><span data-lang="en">ISBN (eBook)</span> 9798235766464</p>
-          <div class="formats">
-            <span class="chip"><span data-lang="tr">Ciltsiz</span><span data-lang="en">Paperback</span></span>
-            <span class="chip"><span data-lang="tr">E-kitap</span><span data-lang="en">eBook</span></span>
-          </div>
-          <div class="buy">
-            <a href="https://www.amazon.com/Bah%C3%A7emin-Sessiz-Bilgeli%C4%9Fi-Arzu-Saydam/dp/1968741607/" class="btn btn-gold"><span data-lang="tr">Amazon'da satın al</span><span data-lang="en">Buy on Amazon</span></a>
-            <a href="https://www.lulu.com/shop/arzu-saydam/bah%C3%A7emin-sessiz-bilgeli%C4%9Fi/paperback/product-q6qqmr7.html" class="btn btn-ghost"><span data-lang="tr">Ciltsiz sipariş et</span><span data-lang="en">Order the paperback</span></a>
-            <a href="https://www.kobo.com/search?query=9798235766464&amp;fclanguages=all" class="btn btn-ghost"><span data-lang="tr">E-kitabı satın al</span><span data-lang="en">Buy the eBook</span></a>
-          </div>
-        </div>
-      </article>
-    </div>
+<section class="books-block">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:2.2rem">
+      <div class="section-tag"><span data-lang="tr">Bahçemin Sessiz Bilgeliği</span><span data-lang="en">The Gentle Wisdom of My Garden</span></div>
     </div>
 
-      <article class="book-card" id="quiet-wisdom">
-        <div class="cover-frame">
-          <img src="assets/cover-wax-front.png" width="724" height="1054" alt="Front cover of The Quiet Wisdom of Wax: Reflections on Art, Creation, and the Inner Life of a Creator by Arzu Saydam">
+    <article class="book edition-row" id="gentle-wisdom">
+      <div class="edition-cover">
+        <img src="assets/cover-en.jpg" width="1280" height="1024" alt="Front cover of The Gentle Wisdom of My Garden by Arzu Saydam, English edition">
+      </div>
+      <div>
+        <p class="edition"><span data-lang="tr">İngilizce baskı</span><span data-lang="en">English edition</span></p>
+        <h2>The Gentle Wisdom of My Garden</h2>
+        <p class="sub">Lessons from Nature and Life</p>
+        <p style="color:var(--ink-soft);margin-top:0.8rem"><span data-lang="tr">İlk kitabı <em>The Gentle Wisdom of My Garden</em> — Türkçe baskısıyla <a href="#bahcemin-sessiz-bilgeligi" style="color:var(--gold)"><em>Bahçemin Sessiz Bilgeliği</em></a> — bahçesinde bulduğu sessiz derslere dayanır ve doğal dünyayı gündelik insan deneyimleriyle buluşturur.</span><span data-lang="en">In her first book, <em>The Gentle Wisdom of My Garden</em>, also published in Turkish as <a href="#bahcemin-sessiz-bilgeligi" style="color:var(--gold)"><em>Bahçemin Sessiz Bilgeliği</em></a>, she draws upon the quiet lessons found in her garden, connecting the natural world with everyday human experiences.</span></p>
+        <p class="meta-quiet" style="margin-top:0.8rem">ISBN 978-1-968741-66-2<br>ISBN-10 1-968741-66-6</p>
+        <div class="formats">
+          <span class="chip"><span data-lang="tr">Ciltsiz</span><span data-lang="en">Paperback</span></span>
+          <span class="chip"><span data-lang="tr">Ciltli</span><span data-lang="en">Hardcover</span></span>
+          <span class="chip"><span data-lang="tr">E-kitap</span><span data-lang="en">eBook</span></span>
         </div>
-        <div class="body">
-          <p class="edition"><span data-lang="tr">İngilizce baskı</span><span data-lang="en">English edition</span></p>
-          <h2>The Quiet Wisdom of Wax</h2>
-          <p class="sub">Reflections on Art, Creation, and the Inner Life of a Creator</p>
-          <p><span data-lang="tr">Onun <em>The Quiet Wisdom of Wax: Reflections on Art, Creation, and the Inner Life of a Creator</em> adlı kitabı, resmini ve yazısını bir araya getirir; sanatsal ifade ile üreten kişinin iç dünyası arasındaki ilişki üzerine düşünür. Balmumu, pigmentler, ısı ve katmanlarla çalışırken, duyguları ve düşünceleri kelimelerin ötesinde keşfetmesine izin veren bir yaratım süreci buldu.</span><span data-lang="en">Her book <em>The Quiet Wisdom of Wax: Reflections on Art, Creation, and the Inner Life of a Creator</em> brings her painting and writing together, reflecting on the relationship between artistic expression and the inner life of the person creating it. Working with beeswax, pigments, heat, and layers, she discovered a creative process that allowed her to explore emotions and ideas beyond words.</span></p>
-          <p class="meta-quiet">Cosmo Publishing Company<br>ISBN 978-1-968741-72-3<br>ISBN-10 1-968741-72-0</p>
-          <p class="meta-quiet"><span data-lang="tr">Türkçe baskısı henüz yok.</span><span data-lang="en">No Turkish edition yet.</span></p>
-          <details class="back-cover">
-            <summary><span data-lang="tr">Arka kapak</span><span data-lang="en">Back cover</span></summary>
-            <img src="assets/cover-wax-back.png" width="727" height="998" alt="Back cover of The Quiet Wisdom of Wax by Arzu Saydam, with the ISBN 978-1-968741-72-3 barcode">
-          </details>
-          <div class="buy">
-            <a href="https://www.amazon.ca/dp/1968741720" class="btn btn-gold"><span data-lang="tr">Amazon'da satın al</span><span data-lang="en">Buy on Amazon</span></a>
-          </div>
+        <div class="buy-row">
+          <a href="https://www.amazon.ca/dp/1968741666" class="btn btn-gold btn-lg"><span data-lang="tr">Amazon'da satın al</span><span data-lang="en">Buy on Amazon</span></a>
+          <a href="#sample" class="btn btn-ghost btn-lg"><span data-lang="tr">Örnek bölüm oku</span><span data-lang="en">Read a sample</span></a>
         </div>
-      </article>
-    </div>
+      </div>
+    </article>
+
+    <article class="book edition-row" id="bahcemin-sessiz-bilgeligi">
+      <div class="edition-cover">
+        <img src="assets/cover-tr.png" width="1222" height="963" alt="Bahçemin Sessiz Bilgeliği — Arzu Saydam, Türkçe baskı kapağı">
+      </div>
+      <div>
+        <p class="edition"><span data-lang="tr">Türkçe baskı</span><span data-lang="en">Turkish edition</span></p>
+        <h2>Bahçemin Sessiz Bilgeliği</h2>
+        <p class="sub">Hayata Dair Dersler</p>
+        <p style="color:var(--ink-soft);margin-top:0.8rem"><span data-lang="tr"><em>The Gentle Wisdom of My Garden</em> kitabının Türkçe baskısı. Bahçesinde bulduğu sessiz derslere dayanır ve doğal dünyayı gündelik insan deneyimleriyle buluşturur.</span><span data-lang="en">The Turkish edition of <em>The Gentle Wisdom of My Garden</em>. She draws upon the quiet lessons found in her garden, connecting the natural world with everyday human experiences.</span></p>
+        <p class="meta-quiet" style="margin-top:0.8rem"><span data-lang="tr">ISBN (Ciltsiz)</span><span data-lang="en">ISBN (Paperback)</span> 978-1-968741-60-0<br><span data-lang="tr">ISBN (E-kitap)</span><span data-lang="en">ISBN (eBook)</span> 9798235766464</p>
+        <div class="formats">
+          <span class="chip"><span data-lang="tr">Ciltsiz</span><span data-lang="en">Paperback</span></span>
+          <span class="chip"><span data-lang="tr">E-kitap</span><span data-lang="en">eBook</span></span>
+        </div>
+        <div class="buy-row">
+          <a href="https://www.amazon.com/Bah%C3%A7emin-Sessiz-Bilgeli%C4%9Fi-Arzu-Saydam/dp/1968741607/" class="btn btn-gold btn-lg"><span data-lang="tr">Amazon'da satın al</span><span data-lang="en">Buy on Amazon</span></a>
+          <a href="https://www.lulu.com/shop/arzu-saydam/bah%C3%A7emin-sessiz-bilgeli%C4%9Fi/paperback/product-q6qqmr7.html" class="btn btn-ghost btn-lg"><span data-lang="tr">Ciltsiz sipariş et</span><span data-lang="en">Order the paperback</span></a>
+          <a href="https://www.kobo.com/search?query=9798235766464&amp;fclanguages=all" class="btn btn-ghost btn-lg"><span data-lang="tr">E-kitabı satın al</span><span data-lang="en">Buy the eBook</span></a>
+        </div>
+      </div>
+    </article>
+
     <p class="shelf-note"><span data-lang="tr">Yeni kitaplar da burada yer bulacak.</span><span data-lang="en">Future books will take their place here.</span></p>
   </div>
 </section>
 
-<section>
-  <div class="narrow">
+<section class="books-block">
+  <div class="measure">
         <div class="section-tag"><span data-lang="tr">Bahçemin Sessiz Bilgeliği</span><span data-lang="en">The Gentle Wisdom of My Garden</span></div>
         <h2 class="section-title"><span data-lang="tr">Bahçemin Sessiz Bilgeliği: Hayata Dair Dersler</span><span data-lang="en">The Gentle Wisdom of My Garden: Lessons from Nature and Life</span></h2>
         <p class="lead" style="margin-bottom:1.2rem"><em><span data-lang="tr">Bazen en büyük dersler en sessiz yerlerde saklıdır.</span><span data-lang="en">Sometimes life's greatest lessons are found in the quietest places.</span></em></p>
