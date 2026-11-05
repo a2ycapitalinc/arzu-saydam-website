@@ -140,7 +140,7 @@ img { display: block; max-width: 100%; }
 .hero--video { background: #0d1b2a; justify-content: flex-end; padding-bottom: 3rem; min-height: 94vh; }
 .hero--video .hero-video {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;
-  background: url('assets/hero_poster.jpg?v=2') center/cover no-repeat;
+  background: url('assets/hero-wax-poster.jpg') center/cover no-repeat;
 }
 .hero--video .v-scrim-top {
   position: absolute; top: 0; left: 0; width: 100%; height: 26%; z-index: 1; pointer-events: none;
@@ -299,6 +299,13 @@ section { padding: 5rem 0; }
 .book-card .buy .btn { text-align: center; }
 .meta-quiet { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.55; }
 .shelf-note { margin-top: 1.4rem; color: var(--ink-soft); font-size: 0.92rem; }
+.garden-film { max-width: 880px; margin: 0 auto 2.2rem; }
+.garden-film video {
+  width: 100%; height: auto; display: block; border-radius: 16px;
+  background: #1c1b19; box-shadow: var(--shadow);
+}
+.garden-film figcaption { margin-top: 0.75rem; text-align: center; color: var(--ink-soft); font-size: 0.92rem; }
+.garden-film figcaption a { color: var(--gold); }
 
 .back-cover { margin-top: 0.2rem; }
 .back-cover summary {

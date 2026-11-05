@@ -9,7 +9,7 @@
   ],
   "headers": [
     {
-      "source": "/assets/(hero-walk.mp4|hero_poster.jpg|arzu.jpg)",
+      "source": "/assets/(hero-wax.mp4|hero-wax-poster.jpg|hero-walk.mp4|hero_poster.jpg|arzu.jpg)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
