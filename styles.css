@@ -49,6 +49,8 @@ img { display: block; max-width: 100%; }
 
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
 .narrow { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
+.measure { max-width: 52rem; margin: 0 auto; padding: 0 1.5rem; }
+.books-block { padding: 4.25rem 0; }
 
 /* ---------- Animations ---------- */
 @keyframes fadeInUp {
@@ -142,6 +144,7 @@ img { display: block; max-width: 100%; }
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;
   background: url('assets/hero-wax-poster.jpg') center/cover no-repeat;
 }
+.hero--garden .hero-video { background-image: url('assets/hero_poster.jpg'); }
 .hero--video .v-scrim-top {
   position: absolute; top: 0; left: 0; width: 100%; height: 26%; z-index: 1; pointer-events: none;
   background: linear-gradient(180deg, rgba(10,20,35,0.5) 0%, rgba(10,20,35,0) 100%);
@@ -272,15 +275,24 @@ section { padding: 5rem 0; }
   font-weight: 600; color: var(--gold); margin-top: 0.85rem;
 }
 
-.catalog {
-  display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  gap: 1.4rem; align-items: start;
+.book-feature h2, .edition-row h2 { font-size: clamp(1.55rem, 2.4vw, 2rem); line-height: 1.2; }
+.edition-row + .edition-row { margin-top: 3.25rem; }
+.feature-cover img {
+  width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: var(--shadow);
 }
-.garden-pair { display: flex; flex-direction: column; gap: 1.4rem; min-width: 0; }
+.edition-cover {
+  aspect-ratio: 5 / 4; border-radius: 12px; overflow: hidden;
+  background: #f3eee6; box-shadow: var(--shadow);
+}
+.edition-cover img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;
+}
+.buy-row { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.35rem; }
+.book-feature .back-cover { margin-top: 1rem; }
+.book-feature .back-cover img { max-width: 340px; }
 .shelf {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; align-items: stretch;
 }
-.shelf-pair { grid-template-columns: 1fr 1fr; }
 .book-card {
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
   box-shadow: var(--shadow); display: flex; flex-direction: column; min-width: 0; height: 100%;
@@ -306,14 +318,6 @@ section { padding: 5rem 0; }
 .book-card .buy .btn { display: block; text-align: center; width: 100%; }
 .meta-quiet { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.55; }
 .shelf-note { margin-top: 1.4rem; color: var(--ink-soft); font-size: 0.92rem; }
-.garden-film { max-width: none; width: 100%; margin: 0; }
-.garden-film video {
-  width: 100%; height: auto; display: block; border-radius: 16px;
-  background: #1c1b19; box-shadow: var(--shadow);
-}
-.garden-film figcaption { margin-top: 0.75rem; text-align: center; color: var(--ink-soft); font-size: 0.92rem; }
-.garden-film figcaption a { color: var(--gold); }
-
 .back-cover { margin-top: 0.2rem; }
 .back-cover summary {
   cursor: pointer; color: var(--gold); font-size: 0.9rem; list-style: none;
@@ -430,10 +434,12 @@ section { padding: 5rem 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .band { padding: 2rem 1.4rem; }
 }
-@media (max-width: 980px) {
-  .catalog { grid-template-columns: 1fr; }
+@media (max-width: 1080px) {
+  .feature-cover, .edition-cover { max-width: 420px; }
+  .buy-row .btn { width: 100%; max-width: 420px; }
 }
 @media (max-width: 680px) {
-  .shelf.shelf-pair, .gallery, .profile, .footer-grid { grid-template-columns: 1fr; }
+  .gallery, .profile, .footer-grid { grid-template-columns: 1fr; }
   .portrait { max-width: 280px; }
+  .feature-cover, .edition-cover { max-width: 100%; }
 }
