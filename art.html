@@ -7,18 +7,18 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sanatım — Arzu Saydam</title>
-<meta name="description" content="Arzu Saydam'ın enkaustik resimleri: ısıtılmış balmumu, pigmentler ve katmanlar. The Quiet Wisdom of Wax, resmini ve yazısını bir araya getirir. Eserler eklenecek.">
+<meta name="description" content="Arzu Saydam'ın enkaustik resimleri: Re-birth, Where Sunset Meets the Sea ve What Remains. Fotoğraflar henüz sitede değil.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Arzu Saydam">
 <meta property="og:title" content="Sanatım — Arzu Saydam">
-<meta property="og:description" content="Arzu Saydam'ın enkaustik resimleri: ısıtılmış balmumu, pigmentler ve katmanlar. The Quiet Wisdom of Wax, resmini ve yazısını bir araya getirir. Eserler eklenecek.">
+<meta property="og:description" content="Arzu Saydam'ın enkaustik resimleri: Re-birth, Where Sunset Meets the Sea ve What Remains. Fotoğraflar henüz sitede değil.">
 <meta property="og:image" content="https://www.arzusaydamauthor.com/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://www.arzusaydamauthor.com/art.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sanatım — Arzu Saydam">
-<meta name="twitter:description" content="Arzu Saydam'ın enkaustik resimleri: ısıtılmış balmumu, pigmentler ve katmanlar. The Quiet Wisdom of Wax, resmini ve yazısını bir araya getirir.">
+<meta name="twitter:description" content="Arzu Saydam'ın enkaustik resimleri: Re-birth, Where Sunset Meets the Sea ve What Remains. Fotoğraflar henüz sitede değil.">
 <meta name="twitter:image" content="https://www.arzusaydamauthor.com/assets/og-image.jpg">
 <link rel="canonical" href="https://www.arzusaydamauthor.com/art.html">
 <link rel="icon" href="assets/logo_square.png?v=2">
@@ -61,68 +61,44 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
   <div class="wrap">
     <div class="center" style="margin-bottom:1.2rem">
       <div class="section-tag"><span data-lang="tr">Eserler</span><span data-lang="en">Works</span></div>
-      <h2 class="section-title"><span data-lang="tr">Eserler eklenecek</span><span data-lang="en">Works will be added</span></h2>
     </div>
-    <p class="works-note"><span data-lang="tr">Eserler buraya eklenecek. Her resimde başlık, ölçü, teknik ve yıl görünecek. Fotoğraflar hazır olduğunda onları <code>assets/art/</code> klasörüne bırakmak yeterli.</span><span data-lang="en">Works will be added here. Each painting will show its title, dimensions, medium, and year. When the photographs are ready, drop them into <code>assets/art/</code>.</span></p>
+    <p class="works-note"><span data-lang="tr">Bu üç resmin fotoğrafları henüz sitede değil. Başlıklar ve anlatımlar aşağıda. Fotoğraflar geldiğinde kendi oranlarıyla, kırpılmadan duracak.</span><span data-lang="en">Photographs of these three paintings are not on the site yet. The titles and descriptions are below. When the photographs arrive, they will keep their own proportions, without cropping.</span></p>
 
     <!--
-      ADD A PAINTING
-      1. Save the photo as assets/art/your-file.jpg (a reasonably sized JPEG is plenty).
-      2. Copy an <article class="artwork is-placeholder"> block.
-      3. On the <img class="artwork-photo">, set src="assets/art/your-file.jpg",
-         alt="Painting title, encaustic, year", and remove the hidden attribute.
-      4. Replace the title, dimensions, medium, and year text. Keep both data-lang spans.
-      5. Remove the class "is-placeholder" from the article.
-      The same button opens the larger view. No other script changes are required.
+      PHOTOGRAPHS — do not add a fourth work.
+      When a file is verified, put it in assets/art/ and add one img inside that
+      work's figure, before the .art-await paragraph:
+        <img src="assets/art/re-birth.jpg" alt="Re-birth, encaustic" width="..." height="...">
+      Files: re-birth.jpg, where-sunset-meets-the-sea.jpg, what-remains.jpg
+      Use the image's real width and height. Do not crop or stretch.
+      Then remove that work's .art-await paragraph.
     -->
-    <div class="gallery" id="gallery">
-      <article class="artwork is-placeholder" data-artwork>
-        <button type="button" class="artwork-open">
-          <span class="artwork-frame">
-            <img class="artwork-photo" alt="" hidden>
-            <span class="artwork-empty"><span data-lang="tr">Eser eklenecek</span><span data-lang="en">Work to be added</span></span>
-          </span>
-          <span class="artwork-caption">
-            <span class="artwork-title"><span data-lang="tr">Başlık</span><span data-lang="en">Title</span></span>
-            <span class="artwork-meta">
-              <span class="artwork-dimensions">—</span>
-              <span class="artwork-medium"><span data-lang="tr">Enkaustik</span><span data-lang="en">Encaustic</span></span>
-              <span class="artwork-year">—</span>
-            </span>
-          </span>
-        </button>
+    <div class="art-list" id="gallery">
+      <article class="art-work" id="re-birth">
+        <figure class="art-figure">
+          <figcaption class="art-await"><span data-lang="tr">Fotoğraf henüz eklenmedi.</span><span data-lang="en">Photograph not yet added.</span></figcaption>
+        </figure>
+        <h3>Re-birth</h3>
+        <p class="edition"><span data-lang="tr">Enkaustik</span><span data-lang="en">Encaustic</span></p>
+        <p><span data-lang="tr">Derin menekşe, turkuaz ve altının dokunuşları, dokulu balmumu katmanlarının arasından belirir; yeni bir hayatın biçimlenişini düşündürürken, daha önce gelenin izleri görünür kalır. <em>The Quiet Wisdom of Wax</em> kapağında yer alan bu resim, yenilenme ve her yeni başlangıca taşıdığımız geçmiş üzerine düşüncemi tutar.</span><span data-lang="en">Deep violet, turquoise, and touches of gold emerge through textured layers of wax, suggesting new life taking shape while traces of what came before remain visible. Featured on the cover of The Quiet Wisdom of Wax, this painting holds my reflection on renewal and the histories we carry into each new beginning.</span></p>
       </article>
-      <article class="artwork is-placeholder" data-artwork>
-        <button type="button" class="artwork-open">
-          <span class="artwork-frame">
-            <img class="artwork-photo" alt="" hidden>
-            <span class="artwork-empty"><span data-lang="tr">Eser eklenecek</span><span data-lang="en">Work to be added</span></span>
-          </span>
-          <span class="artwork-caption">
-            <span class="artwork-title"><span data-lang="tr">Başlık</span><span data-lang="en">Title</span></span>
-            <span class="artwork-meta">
-              <span class="artwork-dimensions">—</span>
-              <span class="artwork-medium"><span data-lang="tr">Enkaustik</span><span data-lang="en">Encaustic</span></span>
-              <span class="artwork-year">—</span>
-            </span>
-          </span>
-        </button>
+
+      <article class="art-work" id="where-sunset-meets-the-sea">
+        <figure class="art-figure">
+          <figcaption class="art-await"><span data-lang="tr">Fotoğraf henüz eklenmedi.</span><span data-lang="en">Photograph not yet added.</span></figcaption>
+        </figure>
+        <h3>Where Sunset Meets the Sea</h3>
+        <p class="edition"><span data-lang="tr">Enkaustik</span><span data-lang="en">Encaustic</span></p>
+        <p><span data-lang="tr">Gül, menekşe ve altın, günbatımının son ışığının kıyıya vurup kırılan dalgalara değişini düşündürür. Dokulu balmumu o huzursuz hareketi tutar; renk, serpinti gibi soluk akşam göğüne yükselir.</span><span data-lang="en">Rose, violet, and gold suggest the last light of sunset catching waves as they break against the shore. The textured wax holds that restless movement, with colour rising like spray into the pale evening sky.</span></p>
       </article>
-      <article class="artwork is-placeholder" data-artwork>
-        <button type="button" class="artwork-open">
-          <span class="artwork-frame">
-            <img class="artwork-photo" alt="" hidden>
-            <span class="artwork-empty"><span data-lang="tr">Eser eklenecek</span><span data-lang="en">Work to be added</span></span>
-          </span>
-          <span class="artwork-caption">
-            <span class="artwork-title"><span data-lang="tr">Başlık</span><span data-lang="en">Title</span></span>
-            <span class="artwork-meta">
-              <span class="artwork-dimensions">—</span>
-              <span class="artwork-medium"><span data-lang="tr">Enkaustik</span><span data-lang="en">Encaustic</span></span>
-              <span class="artwork-year">—</span>
-            </span>
-          </span>
-        </button>
+
+      <article class="art-work" id="what-remains">
+        <figure class="art-figure">
+          <figcaption class="art-await"><span data-lang="tr">Fotoğraf henüz eklenmedi.</span><span data-lang="en">Photograph not yet added.</span></figcaption>
+        </figure>
+        <h3>What Remains</h3>
+        <p class="edition"><span data-lang="tr">Enkaustik</span><span data-lang="en">Encaustic</span></p>
+        <p><span data-lang="tr">Bir zamanlar işe yarayan ve bir zamanlar canlı olan bu nesneler, balmumunun sıcak bronz ve fildişi katmanlarında birlikte durur. Tüyler, kurumuş yapraklar ve yıpranmış metal, başka türlü yanından geçebileceğimiz şeylerin dokusuna ve sessiz güzelliğine daha yakından bakmaya çağırır.</span><span data-lang="en">These once-useful and once-living objects rest together in warm bronze and ivory layers of wax. Feathers, dried leaves, and weathered metal invite a closer look at the textures and quiet beauty of things we might otherwise pass by.</span></p>
       </article>
     </div>
   </div>
