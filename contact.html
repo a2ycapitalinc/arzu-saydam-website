@@ -45,19 +45,24 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
       <div class="card">
         <div class="body">
           <h3 style="margin-bottom:1rem"><span data-lang="tr">Mesaj gönderin</span><span data-lang="en">Send a message</span></h3>
-          <form onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('c-thanks').style.display='block';">
-            <div class="field"><label for="c-name"><span data-lang="tr">Adınız</span><span data-lang="en">Your name</span></label><input id="c-name" type="text" required></div>
-            <div class="field"><label for="c-email"><span data-lang="tr">E-posta adresi</span><span data-lang="en">Email address</span></label><input id="c-email" type="email" required></div>
+          <form id="c-form" method="post" novalidate>
+            <div class="hp" aria-hidden="true">
+              <label for="c-company">Company</label>
+              <input id="c-company" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="field"><label for="c-name"><span data-lang="tr">Adınız</span><span data-lang="en">Your name</span></label><input id="c-name" name="name" type="text" required></div>
+            <div class="field"><label for="c-email"><span data-lang="tr">E-posta adresi</span><span data-lang="en">Email address</span></label><input id="c-email" name="email" type="email" required></div>
             <div class="field"><label for="c-topic"><span data-lang="tr">Konu nedir?</span><span data-lang="en">What's this about?</span></label>
-              <select id="c-topic">
+              <select id="c-topic" name="topic_id" required>
                 <option value="reader" data-label-tr="Bir okurdan not" data-label-en="A note from a reader">Bir okurdan not</option>
                 <option value="event" data-label-tr="Etkinlik daveti" data-label-en="An event invitation">Etkinlik daveti</option>
                 <option value="media" data-label-tr="Basın veya söyleşi talebi" data-label-en="A media or interview request">Basın veya söyleşi talebi</option>
                 <option value="other" data-label-tr="Başka bir şey" data-label-en="Something else">Başka bir şey</option>
               </select>
             </div>
-            <div class="field"><label for="c-msg"><span data-lang="tr">Mesaj</span><span data-lang="en">Message</span></label><textarea id="c-msg" rows="5" required></textarea></div>
+            <div class="field"><label for="c-msg"><span data-lang="tr">Mesaj</span><span data-lang="en">Message</span></label><textarea id="c-msg" name="message" rows="5" required></textarea></div>
             <button type="submit" class="btn btn-gold btn-lg" style="width:100%"><span data-lang="tr">Mesajı gönder</span><span data-lang="en">Send message</span></button>
+            <p id="c-form-status" class="form-status" role="alert" hidden></p>
           </form>
           <div id="c-thanks" style="display:none;text-align:center;padding:1rem 0">
             <div style="font-size:2rem;color:var(--gold)">❧</div>
@@ -88,6 +93,8 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
 </main>
 
 <div id="footer-slot"></div>
+<script src="forms-config.js"></script>
 <script src="partials.js"></script>
+<script type="module" src="forms.mjs"></script>
 </body>
 </html>
