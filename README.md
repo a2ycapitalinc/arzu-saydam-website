@@ -29,4 +29,4 @@ Canonical, Open Graph, Twitter image, `sitemap.xml`, and `robots.txt` URLs use t
 - My Art (`art.html`) is a gallery scaffold. Drop photographs into `assets/art/` and follow the HTML comment in `art.html`. No painting photos are on the site yet.
 - Exhibitions & Events is not in the nav. The older `events.html` page is still linked from the footer.
 - Instagram and Facebook already point to Arzu's profiles in the footer and on Contact. LinkedIn and Goodreads are not linked on the site.
-- Contact and newsletter forms are still front-end only (no email delivery). They show a thank-you state in the browser and are not wired to a form service. The Formspree id is still pending.
+- Contact and newsletter notifications are sent by `api/form.js` through Microsoft Graph, from `MAIL_FROM` to `NOTIFY_TO`. Those values, plus the Entra app credentials, live in the Vercel environment, not in git. See `FORMS.md`. Newsletter gifts are not in the repo, so the "gift is on its way" sentence stays hidden.

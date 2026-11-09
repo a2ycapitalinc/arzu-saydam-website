@@ -57,11 +57,15 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
       <div class="card">
         <div class="body">
           <h3 style="margin-bottom:1rem"><span data-lang="tr">Listeye katılın</span><span data-lang="en">Join the list</span></h3>
-          <form onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('nl-thanks').style.display='block';">
-            <div class="field"><label for="nl-name"><span data-lang="tr">Adınız</span><span data-lang="en">First name</span></label><input id="nl-name" type="text"></div>
-            <div class="field"><label for="nl-email"><span data-lang="tr">E-posta adresi</span><span data-lang="en">Email address</span></label><input id="nl-email" type="email" required placeholder="ornek@eposta.com"></div>
+          <form id="nl-form" method="post" novalidate>
+            <div class="hp" aria-hidden="true">
+              <label for="nl-company">Company</label>
+              <input id="nl-company" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="field"><label for="nl-name"><span data-lang="tr">Adınız</span><span data-lang="en">First name</span></label><input id="nl-name" name="first_name" type="text"></div>
+            <div class="field"><label for="nl-email"><span data-lang="tr">E-posta adresi</span><span data-lang="en">Email address</span></label><input id="nl-email" name="email" type="email" required placeholder="ornek@eposta.com"></div>
             <div class="field"><label for="nl-gift"><span data-lang="tr">Hoş geldin hediyeniz</span><span data-lang="en">Your welcome gift</span></label>
-              <select id="nl-gift">
+              <select id="nl-gift" name="gift_id" required>
                 <option value="story" data-label-tr="Bir kısa öykü" data-label-en="A short story">Bir kısa öykü</option>
                 <option value="sample" data-label-tr="Örnek bir bölüm" data-label-en="A sample chapter">Örnek bir bölüm</option>
                 <option value="journal" data-label-tr="Yazdırılabilir bahçe günlüğü sayfası" data-label-en="A printable garden-journal page">Yazdırılabilir bahçe günlüğü sayfası</option>
@@ -70,11 +74,17 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
             </div>
             <button type="submit" class="btn btn-gold btn-lg" style="width:100%"><span data-lang="tr">Abone ol ve hediyemi gönder</span><span data-lang="en">Subscribe &amp; send my gift</span></button>
             <p style="font-size:0.78rem;color:var(--ink-soft);margin-top:0.8rem;text-align:center"><span data-lang="tr">Asla spam yok. İstediğiniz zaman ayrılabilirsiniz.</span><span data-lang="en">No spam, ever. Unsubscribe anytime.</span></p>
+            <p id="nl-form-status" class="form-status" role="alert" hidden></p>
           </form>
           <div id="nl-thanks" style="display:none;text-align:center;padding:1rem 0">
             <div style="font-size:2rem;color:var(--gold)">❧</div>
             <h3><span data-lang="tr">Bahçeye hoş geldiniz</span><span data-lang="en">Welcome to the garden</span></h3>
             <p style="color:var(--ink-soft)"><span data-lang="tr">Katıldığınız için teşekkürler. Hediyeniz e-postanıza doğru yola çıktı.</span><span data-lang="en">Thank you for joining. Your gift is on its way to your inbox.</span></p>
+          </div>
+          <div id="nl-received" style="display:none;text-align:center;padding:1rem 0">
+            <div style="font-size:2rem;color:var(--gold)">❧</div>
+            <h3><span data-lang="tr">Kaydınız alındı</span><span data-lang="en">You're signed up</span></h3>
+            <p style="color:var(--ink-soft)"><span data-lang="tr">Kaydınız alındı. Hoş geldin hediyesi henüz e-postayla gönderilecek durumda değil, bu yüzden gönderilmedi.</span><span data-lang="en">You're signed up. The welcome gift is not ready to email yet, so it was not sent.</span></p>
           </div>
         </div>
       </div>
@@ -86,5 +96,6 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
 
 <div id="footer-slot"></div>
 <script src="partials.js"></script>
+<script type="module" src="forms.mjs"></script>
 </body>
 </html>
