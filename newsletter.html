@@ -81,6 +81,11 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
             <h3><span data-lang="tr">Bahçeye hoş geldiniz</span><span data-lang="en">Welcome to the garden</span></h3>
             <p style="color:var(--ink-soft)"><span data-lang="tr">Katıldığınız için teşekkürler. Hediyeniz e-postanıza doğru yola çıktı.</span><span data-lang="en">Thank you for joining. Your gift is on its way to your inbox.</span></p>
           </div>
+          <div id="nl-received" style="display:none;text-align:center;padding:1rem 0">
+            <div style="font-size:2rem;color:var(--gold)">❧</div>
+            <h3><span data-lang="tr">Kaydınız alındı</span><span data-lang="en">You're signed up</span></h3>
+            <p style="color:var(--ink-soft)"><span data-lang="tr">Kaydınız alındı. Hoş geldin hediyesi henüz e-postayla gönderilecek durumda değil, bu yüzden gönderilmedi.</span><span data-lang="en">You're signed up. The welcome gift is not ready to email yet, so it was not sent.</span></p>
+          </div>
         </div>
       </div>
     </div>
@@ -90,7 +95,6 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
 </main>
 
 <div id="footer-slot"></div>
-<script src="forms-config.js"></script>
 <script src="partials.js"></script>
 <script type="module" src="forms.mjs"></script>
 </body>
