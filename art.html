@@ -68,7 +68,10 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
       <article class="art-work" id="re-birth">
         <figure class="art-figure">
           <button type="button" class="art-open" data-art-open aria-label="Re-birth">
-            <img src="assets/art/re-birth.png" alt="Re-birth, encaustic painting in violet, turquoise, and gold" width="480" height="531">
+            <picture>
+              <source srcset="assets/art/re-birth.webp?v=2" type="image/webp">
+              <img src="assets/art/re-birth.png?v=2" alt="Re-birth, encaustic painting in violet, turquoise, and gold" width="443" height="443">
+            </picture>
           </button>
         </figure>
         <h3>Re-birth</h3>
@@ -79,7 +82,10 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
       <article class="art-work" id="where-sunset-meets-the-sea">
         <figure class="art-figure">
           <button type="button" class="art-open" data-art-open aria-label="Where Sunset Meets the Sea">
-            <img src="assets/art/where-sunset-meets-the-sea.png" alt="Where Sunset Meets the Sea, encaustic painting in rose, violet, and gold" width="480" height="508">
+            <picture>
+              <source srcset="assets/art/where-sunset-meets-the-sea.webp?v=2" type="image/webp">
+              <img src="assets/art/where-sunset-meets-the-sea.png?v=2" alt="Where Sunset Meets the Sea, encaustic painting in rose, violet, and gold" width="456" height="456">
+            </picture>
           </button>
         </figure>
         <h3>Where Sunset Meets the Sea</h3>
@@ -90,7 +96,10 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
       <article class="art-work" id="what-remains">
         <figure class="art-figure">
           <button type="button" class="art-open" data-art-open aria-label="What Remains">
-            <img src="assets/art/what-remains.png" alt="What Remains, encaustic painting with feathers and metal in bronze and ivory wax" width="480" height="490">
+            <picture>
+              <source srcset="assets/art/what-remains.webp?v=2" type="image/webp">
+              <img src="assets/art/what-remains.png?v=2" alt="What Remains, encaustic painting with feathers and metal in bronze and ivory wax" width="396" height="396">
+            </picture>
           </button>
         </figure>
         <h3>What Remains</h3>
@@ -132,7 +141,7 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
   var empty = document.getElementById('lightbox-empty');
   var title = document.getElementById('lightbox-title');
   function openFrom(img, heading) {
-    var src = img && img.getAttribute('src');
+    var src = img && (img.currentSrc || img.getAttribute('src'));
     if (src) {
       photo.src = src;
       photo.alt = img.alt || '';
