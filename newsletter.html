@@ -45,9 +45,9 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
       <div>
         <span class="gift" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--paper-2);border:1px solid var(--line);padding:0.5rem 1rem;border-radius:999px;font-size:0.85rem;margin-bottom:1rem;color:var(--ink-soft)">✦ <span data-lang="tr">Katılana küçük bir hediye</span><span data-lang="en">A free gift when you join</span></span>
         <h2 class="section-title"><span data-lang="tr">Abone olun ve hoş geldin hediyenizi seçin</span><span data-lang="en">Subscribe, and choose your welcome gift</span></h2>
-        <p style="color:var(--ink-soft);margin:0.6rem 0 1rem"><span data-lang="tr">Katıldığınızda, teşekkür olarak bunlardan birini alacaksınız — kitap alsanız da almasanız da sizin:</span><span data-lang="en">When you join, you'll receive one of these as a thank-you — yours to keep, whether or not you ever buy a book:</span></p>
+        <p style="color:var(--ink-soft);margin:0.6rem 0 1rem"><span data-lang="tr">Katıldığınızda teşekkür olarak bunlardan birini seçin. Arzu seçtiğinizi e-posta ile gönderecek — kitap alsanız da almasanız da sizin:</span><span data-lang="en">When you join, choose one of these as a thank-you. Arzu will email your choice — yours to keep, whether or not you ever buy a book:</span></p>
         <ul style="list-style:none;color:var(--ink-soft);display:flex;flex-direction:column;gap:0.6rem">
-          <li>❧&nbsp; <span data-lang="tr">E-postanıza gönderilen bir kısa öykü</span><span data-lang="en">A short story, sent straight to your inbox</span></li>
+          <li>❧&nbsp; <span data-lang="tr">Bir kısa öykü</span><span data-lang="en">A short story</span></li>
           <li>❧&nbsp; <span data-lang="tr"><em>Bahçemin Sessiz Bilgeliği</em>'nden örnek bir bölüm</span><span data-lang="en">A sample chapter of <em>Bahçemin Sessiz Bilgeliği</em></span></li>
           <li>❧&nbsp; <span data-lang="tr">Yazdırılabilir bir bahçe günlüğü sayfası</span><span data-lang="en">A printable garden-journal page</span></li>
           <li>❧&nbsp; <span data-lang="tr">Yollardan bir seyahat denemesi</span><span data-lang="en">A travel essay from the road</span></li>
@@ -57,24 +57,36 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
       <div class="card">
         <div class="body">
           <h3 style="margin-bottom:1rem"><span data-lang="tr">Listeye katılın</span><span data-lang="en">Join the list</span></h3>
-          <form onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('nl-thanks').style.display='block';">
-            <div class="field"><label for="nl-name"><span data-lang="tr">Adınız</span><span data-lang="en">First name</span></label><input id="nl-name" type="text"></div>
-            <div class="field"><label for="nl-email"><span data-lang="tr">E-posta adresi</span><span data-lang="en">Email address</span></label><input id="nl-email" type="email" required placeholder="ornek@eposta.com"></div>
+          <form id="nl-form" data-form="newsletter" method="post" novalidate>
+            <input type="hidden" name="access_key" value="2f3a28a9-919c-405b-8b5c-309c4fafdba7">
+            <input type="hidden" name="subject" value="New gift signup – arzusaydamauthor.com">
+            <input type="hidden" name="from_name" value="Arzu Saydam website">
+            <input type="hidden" name="replyto" value="">
+            <input type="hidden" name="language" value="">
+            <input type="hidden" name="page_url" value="">
+            <input type="hidden" name="gift" value="">
+            <div class="hp" aria-hidden="true">
+              <label for="nl-botcheck">Botcheck</label>
+              <input id="nl-botcheck" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="field"><label for="nl-name"><span data-lang="tr">Adınız</span><span data-lang="en">First name</span></label><input id="nl-name" name="name" type="text"></div>
+            <div class="field"><label for="nl-email"><span data-lang="tr">E-posta adresi</span><span data-lang="en">Email address</span></label><input id="nl-email" name="email" type="email" required placeholder="ornek@eposta.com"></div>
             <div class="field"><label for="nl-gift"><span data-lang="tr">Hoş geldin hediyeniz</span><span data-lang="en">Your welcome gift</span></label>
-              <select id="nl-gift">
+              <select id="nl-gift" name="gift_id" required>
                 <option value="story" data-label-tr="Bir kısa öykü" data-label-en="A short story">Bir kısa öykü</option>
                 <option value="sample" data-label-tr="Örnek bir bölüm" data-label-en="A sample chapter">Örnek bir bölüm</option>
                 <option value="journal" data-label-tr="Yazdırılabilir bahçe günlüğü sayfası" data-label-en="A printable garden-journal page">Yazdırılabilir bahçe günlüğü sayfası</option>
                 <option value="travel" data-label-tr="Bir seyahat denemesi" data-label-en="A travel essay">Bir seyahat denemesi</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-gold btn-lg" style="width:100%"><span data-lang="tr">Abone ol ve hediyemi gönder</span><span data-lang="en">Subscribe &amp; send my gift</span></button>
+            <button type="submit" class="btn btn-gold btn-lg" style="width:100%"><span data-lang="tr">Abone ol</span><span data-lang="en">Subscribe</span></button>
             <p style="font-size:0.78rem;color:var(--ink-soft);margin-top:0.8rem;text-align:center"><span data-lang="tr">Asla spam yok. İstediğiniz zaman ayrılabilirsiniz.</span><span data-lang="en">No spam, ever. Unsubscribe anytime.</span></p>
+            <p id="nl-form-status" class="form-status" role="alert" hidden></p>
           </form>
           <div id="nl-thanks" style="display:none;text-align:center;padding:1rem 0">
             <div style="font-size:2rem;color:var(--gold)">❧</div>
             <h3><span data-lang="tr">Bahçeye hoş geldiniz</span><span data-lang="en">Welcome to the garden</span></h3>
-            <p style="color:var(--ink-soft)"><span data-lang="tr">Katıldığınız için teşekkürler. Hediyeniz e-postanıza doğru yola çıktı.</span><span data-lang="en">Thank you for joining. Your gift is on its way to your inbox.</span></p>
+            <p style="color:var(--ink-soft)"><span data-lang="tr">Teşekkürler! Arzu hediyenizi yakında e-posta ile gönderecek.</span><span data-lang="en">Thank you! Arzu will send your gift by email soon.</span></p>
           </div>
         </div>
       </div>
@@ -86,5 +98,6 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
 
 <div id="footer-slot"></div>
 <script src="partials.js"></script>
+<script src="forms.js"></script>
 </body>
 </html>

@@ -224,7 +224,10 @@ section { padding: 5rem 0; }
 .field input, .field textarea, .field select {
   width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--line); border-radius: 12px;
   font-family: var(--sans); font-size: 0.95rem; background: #fff; color: var(--ink); }
-.field input:focus, .field textarea:focus { outline: none; border-color: var(--gold); }
+.field input:focus, .field textarea:focus, .field select:focus { outline: none; border-color: var(--gold); }
+.btn:disabled { opacity: 0.65; cursor: wait; }
+.form-status { color: var(--ink); font-size: 0.92rem; margin-top: 0.85rem; }
+.hp { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 /* Newsletter band */
 .band { background: linear-gradient(135deg, #1f2831, #2c3a44); color: #f3ead6; border-radius: var(--radius); padding: 3rem; text-align: center; }
