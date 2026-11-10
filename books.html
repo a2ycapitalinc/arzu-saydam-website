@@ -84,7 +84,7 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
         "alternateName": "The Quiet Wisdom of Wax",
         "author": { "@type": "Person", "name": "Arzu Saydam" },
         "inLanguage": "tr",
-        "image": "https://www.arzusaydamauthor.com/assets/cover-wax-front.png"
+        "image": "https://www.arzusaydamauthor.com/assets/books/wax-tr.jpg"
       }
     }
   ]
@@ -140,7 +140,14 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
     <div class="wax-editions" id="wax-editions">
     <article class="book book-feature wax-edition wax-tr" id="balmumunun-sessiz-ogretisi">
       <div class="feature-cover cover-natural">
-        <img src="assets/cover-wax-front.png" width="724" height="1054" alt="Balmumunun Sessiz Öğretisi, Arzu Saydam, Türkçe baskı">
+        <picture data-lang="tr">
+          <source srcset="assets/books/wax-tr.webp" type="image/webp">
+          <img src="assets/books/wax-tr.jpg" width="1024" height="1536" alt="Balmumunun Sessiz Öğretisi, Arzu Saydam, Türkçe baskı">
+        </picture>
+        <picture data-lang="en">
+          <source srcset="assets/books/wax-tr.webp" type="image/webp">
+          <img src="assets/books/wax-tr.jpg" width="1024" height="1536" alt="Balmumunun Sessiz Öğretisi, the Turkish edition of The Quiet Wisdom of Wax, by Arzu Saydam">
+        </picture>
       </div>
       <div>
         <p class="edition"><span data-lang="tr">Türkçe baskı</span><span data-lang="en">Turkish edition</span></p>
@@ -154,7 +161,8 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
     <article class="book book-feature wax-edition wax-en" id="quiet-wisdom">
       <div class="feature-cover cover-natural">
         <a class="cover-link" href="https://www.amazon.ca/dp/1968741720">
-          <img src="assets/cover-wax-front.png" width="724" height="1054" alt="The Quiet Wisdom of Wax, English edition by Arzu Saydam">
+          <img data-lang="tr" src="assets/cover-wax-front.png" width="724" height="1054" alt="The Quiet Wisdom of Wax, Arzu Saydam, İngilizce baskı">
+          <img data-lang="en" src="assets/cover-wax-front.png" width="724" height="1054" alt="The Quiet Wisdom of Wax, English edition by Arzu Saydam">
         </a>
       </div>
       <div>

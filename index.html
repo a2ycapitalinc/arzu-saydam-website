@@ -69,7 +69,14 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
   <div class="wrap">
     <div class="book">
       <div class="book-media wax-pair-media">
-        <img src="assets/cover-wax-front.png" width="724" height="1054" alt="The Quiet Wisdom of Wax and Balmumunun Sessiz Öğretisi by Arzu Saydam">
+        <picture data-lang="tr">
+          <source srcset="assets/books/wax-pair.webp" type="image/webp">
+          <img src="assets/books/wax-pair.jpg" width="1024" height="1536" alt="Balmumunun Sessiz Öğretisi ve The Quiet Wisdom of Wax, Arzu Saydam">
+        </picture>
+        <picture data-lang="en">
+          <source srcset="assets/books/wax-pair.webp" type="image/webp">
+          <img src="assets/books/wax-pair.jpg" width="1024" height="1536" alt="The Quiet Wisdom of Wax and its Turkish edition, Balmumunun Sessiz Öğretisi, by Arzu Saydam">
+        </picture>
       </div>
       <div>
         <div class="section-tag"><span data-lang="tr">İki baskı</span><span data-lang="en">Two editions</span></div>
@@ -78,7 +85,7 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
         <p style="color:var(--ink-soft);margin-bottom:1rem"><span data-lang="tr">Onun <em>The Quiet Wisdom of Wax: Reflections on Art, Creation, and the Inner Life of a Creator</em> adlı kitabı, resmini ve yazısını bir araya getirir; sanatsal ifade ile üreten kişinin iç dünyası arasındaki ilişki üzerine düşünür.</span><span data-lang="en">Her book <em>The Quiet Wisdom of Wax: Reflections on Art, Creation, and the Inner Life of a Creator</em> brings her painting and writing together, reflecting on the relationship between artistic expression and the inner life of the person creating it.</span></p>
         <p style="color:var(--ink-soft);margin-bottom:1.2rem"><span data-lang="tr">İlk kitabı <a href="books.html#gentle-wisdom" style="color:var(--gold)">The Gentle Wisdom of My Garden</a> — Türkçe baskısıyla <a href="books.html#bahcemin-sessiz-bilgeligi" style="color:var(--gold)">Bahçemin Sessiz Bilgeliği</a> — bahçesinde bulduğu sessiz derslere dayanır ve doğal dünyayı gündelik insan deneyimleriyle buluşturur.</span><span data-lang="en">In her first book, <a href="books.html#gentle-wisdom" style="color:var(--gold)">The Gentle Wisdom of My Garden</a>, also published in Turkish as <a href="books.html#bahcemin-sessiz-bilgeligi" style="color:var(--gold)">Bahçemin Sessiz Bilgeliği</a>, she draws upon the quiet lessons found in her garden, connecting the natural world with everyday human experiences.</span></p>
         <div class="hero-cta" style="justify-content:flex-start">
-          <a href="books.html#quiet-wisdom" class="btn btn-gold btn-lg"><span data-lang="tr">Kitaplarım</span><span data-lang="en">My Books</span></a>
+          <a href="books.html#wax-editions" class="btn btn-gold btn-lg"><span data-lang="tr">Kitaplarım</span><span data-lang="en">My Books</span></a>
           <a href="art.html" class="btn btn-ghost btn-lg"><span data-lang="tr">Sanatım</span><span data-lang="en">My Art</span></a>
         </div>
       </div>
