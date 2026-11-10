@@ -311,6 +311,30 @@ section { padding: 5rem 0; }
   border-radius: 0;
   box-shadow: none;
 }
+.cover-natural {
+  aspect-ratio: auto;
+  overflow: visible;
+  position: static;
+  background: transparent;
+  box-shadow: none;
+}
+.cover-natural picture,
+.cover-natural .cover-link { display: block; }
+.cover-natural img {
+  position: static;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}
+.wax-editions { display: flex; flex-direction: column; gap: 3.5rem; }
+html:not(.lang-en) .wax-en { order: 2; }
+html.lang-en .wax-tr { order: 2; }
+.coming-soon { margin-top: 1.2rem; }
+.book:has(.wax-pair-media) { grid-template-columns: minmax(280px, 420px) minmax(0, 1fr); }
+.wax-pair-media { max-width: 420px; margin: 0; }
+.wax-pair-media img { width: 100%; height: auto; display: block; object-fit: contain; border-radius: 12px; }
 .buy-row { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.35rem; }
 .book-feature .back-cover { margin-top: 1rem; }
 .book-feature .back-cover img { max-width: 340px; }
