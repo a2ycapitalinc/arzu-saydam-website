@@ -24,7 +24,7 @@ Live at: https://www.arzusaydamauthor.com
 Canonical, Open Graph, Twitter image, `sitemap.xml`, and `robots.txt` URLs use that `www` host so search and share previews stay on one domain.
 
 ## Known follow-ups
-- Purchase links and ISBNs on `books.html` are live. Garden book: Amazon, Lulu, and Kobo, in Turkish and English. *The Quiet Wisdom of Wax* (English only, ISBN 978-1-968741-72-3) links to https://www.amazon.ca/dp/1968741720. There is no Turkish edition yet.
+- Purchase links and ISBNs on `books.html` are live. Garden book: Amazon, Lulu, and Kobo, in Turkish and English. *The Quiet Wisdom of Wax* (ISBN 978-1-968741-72-3) links to https://www.amazon.ca/dp/1968741720. The Turkish edition is *Balmumunun Sessiz Öğretisi*; no separate buy link was found for it.
 - Homepage hero is `assets/hero-wax.mp4` (autoplay, muted). The garden walk stays at `assets/hero-walk.mp4` and plays from My Books on click. Do not delete `hero-walk.mp4`.
 - My Art (`art.html`) is a gallery scaffold. Drop photographs into `assets/art/` and follow the HTML comment in `art.html`. No painting photos are on the site yet.
 - Exhibitions & Events is not in the nav. The older `events.html` page is still linked from the footer.
