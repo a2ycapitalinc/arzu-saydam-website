@@ -332,6 +332,13 @@ section { padding: 5rem 0; }
 html:not(.lang-en) .wax-en { order: 2; }
 html.lang-en .wax-tr { order: 2; }
 .coming-soon { margin-top: 1.2rem; }
+.edition-blurb { margin-top: 1.15rem; }
+.edition-blurb h3 { font-family: var(--serif); font-size: 1.2rem; margin: 0 0 0.55rem; }
+.edition-blurb p { color: var(--ink-soft); margin: 0 0 0.75rem; }
+.foreword { margin-top: 0.4rem; }
+.foreword summary { cursor: pointer; color: var(--gold); font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; list-style: none; }
+.foreword summary::-webkit-details-marker { display: none; }
+.foreword p { margin-top: 0.8rem; }
 .book:has(.wax-pair-media) { grid-template-columns: minmax(280px, 420px) minmax(0, 1fr); }
 .wax-pair-media { max-width: 420px; margin: 0; }
 .wax-pair-media img { width: 100%; height: auto; display: block; object-fit: contain; border-radius: 12px; }
