@@ -71,7 +71,7 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
         "publisher": { "@type": "Organization", "name": "Cosmo Publishing Company" },
         "inLanguage": "en",
         "isbn": "9781968741723",
-        "image": "https://www.arzusaydamauthor.com/assets/cover-wax-front.png",
+        "image": "https://www.arzusaydamauthor.com/assets/books/wax-en.jpg",
         "url": "https://www.amazon.ca/dp/1968741720"
       }
     },
@@ -183,8 +183,14 @@ try{if(localStorage.getItem('lang')==='en'){document.documentElement.classList.a
     <article class="book book-feature wax-edition wax-en" id="quiet-wisdom">
       <div class="feature-cover cover-natural">
         <a class="cover-link" href="https://www.amazon.ca/dp/1968741720">
-          <img data-lang="tr" src="assets/cover-wax-front.png" width="724" height="1054" alt="The Quiet Wisdom of Wax, Arzu Saydam, İngilizce baskı">
-          <img data-lang="en" src="assets/cover-wax-front.png" width="724" height="1054" alt="The Quiet Wisdom of Wax, English edition by Arzu Saydam">
+          <picture data-lang="tr">
+            <source srcset="assets/books/wax-en.webp" type="image/webp">
+            <img src="assets/books/wax-en.jpg" width="1024" height="1536" alt="The Quiet Wisdom of Wax, Arzu Saydam, İngilizce baskı">
+          </picture>
+          <picture data-lang="en">
+            <source srcset="assets/books/wax-en.webp" type="image/webp">
+            <img src="assets/books/wax-en.jpg" width="1024" height="1536" alt="The Quiet Wisdom of Wax, English edition by Arzu Saydam">
+          </picture>
         </a>
       </div>
       <div>
